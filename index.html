@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>categolj2-frontend by making</title>
+    <title>CategoLJ2</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="css/uikit.css">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -14,11 +13,11 @@
     <![endif]-->
 </head>
 <body>
-<div class="wrapper">
+<div class="uk-container uk-container-center">
     <header>
-        <h1>categolj2</h1>
+        <h1>CategoLJ2</h1>
 
-        <p>Tech memo</p>
+        <p>@making's Tech memo</p>
 
         <p class="view">
             <a href="https://github.com/making/categolj2-frontend">View
@@ -27,56 +26,65 @@
             </a>
         </p>
     </header>
-    <section id="recently-posts"></section>
-    <section id="entries"></section>
-    <footer>
-        <p>
-            This project is maintained by <a
-                href="https://github.com/making">making</a>
-        </p>
+    <div class="uk-grid">
+        <div class="uk-width-2-10">
+            <section id="links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="">GitHub</a></li>
+                    <li><a href="">SlideShare</a></li>
+                </ul>
+            </section>
+            <section id="recently-posts"></section>
+        </div>
+        <div class="uk-width-8-10">
+            <section id="entries"></section>
+            <footer>
+                <p>
+                    This project is maintained by <a
+                        href="https://github.com/making">making</a>
+                </p>
 
-        <p>
-            <small>Hosted on GitHub Pages &mdash; Theme by <a
-                    href="https://github.com/orderedlist">orderedlist</a></small>
-        </p>
-    </footer>
+                <p>
+                    <small>Hosted on GitHub Pages &mdash; Theme by <a
+                            href="https://github.com/orderedlist">orderedlist</a></small>
+                </p>
+            </footer>
+        </div>
+    </div>
 </div>
+
+<!-- Templates -->
 <script type="text/x-handlebars-template" id="recently-posts-tmpl">
     <h3>Recently Posts</h3>
     <ul>
         {{#each recently_posts}}
-        <li><a href="{{entry_id}}">{{title}}</a></li>
+        <li><a href="entries/{{entry_id}}">{{title}}</a></li>
         {{/each}}
     </ul>
 </script>
 <script type="text/x-handlebars-template" id="entries-tmpl">
     {{#each entries}}
-    <h3>{{title}}</h3>
-    <small>{{updated_at}} by {{created_by.username}}</small>
+    <article class="uk-article">
+        <h3 class="uk-article-title"><a href="entries/{{entry_id}}">{{title}}</a></h3>
 
-    <p>
-        {{contents}}
-    </p>
-    <hr>
+        <p class="uk-article-meta">{{updated_at}} by <a href="users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
+            &nbsp; category: {{categoryLink categories}}</p>
+
+        <p class="uk-article-lead">
+            {{contents}}
+        </p>
+        <hr class="uk-article-divider">
+    </article>
     {{/each}}
 </script>
+
 <script src="javascripts/scale.fix.js"></script>
 <script src="javascripts/jquery-1.10.2.min.js"></script>
 <script src="javascripts/handlebars-1.0.0.js"></script>
-<script type="text/javascript">
-    $(function () {
-        var entriesTmpl = $('#entries-tmpl').html(),
-                entriesCompiled = Handlebars.compile(entriesTmpl),
-                $entries = $('#entries'),
-                recentlyPostsTmpl = $('#recently-posts-tmpl').html(),
-                recentlyPostsCompiled = Handlebars.compile(recentlyPostsTmpl),
-                $recentlyPosts = $('#recently-posts');
-
-        $.getJSON('https://s3-ap-northeast-1.amazonaws.com/dummyapi/entries.json').success(function (data) {
-            $entries.html(entriesCompiled(data));
-            $recentlyPosts.html(recentlyPostsCompiled(data));
-        });
-    })
-</script>
+<script src="javascripts/underscore-1.5.1.min.js"></script>
+<script src="javascripts/main.js"></script>
+<script src="js/uikit.js"></script>
 </body>
 </html>
