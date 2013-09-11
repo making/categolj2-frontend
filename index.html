@@ -6,6 +6,7 @@
     <title>CategoLJ2</title>
 
     <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/uikit.gradient.css">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -20,35 +21,42 @@
         <p>@making's Tech memo</p>
 
         <p class="view">
-            <a href="https://github.com/making/categolj2-frontend">View
-                the Project on GitHub
-                <small>making/categolj2-frontend</small>
-            </a>
+
+        <form class="uk-search" data-uk-search>
+            <input class="uk-search-field" type="search" placeholder="search...">
+            <button class="uk-search-close" type="reset"></button>
+        </form>
         </p>
     </header>
     <div class="uk-grid">
-        <div class="uk-width-2-10">
-            <section id="links">
-                <h3>Links</h3>
-                <ul>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">GitHub</a></li>
-                    <li><a href="">SlideShare</a></li>
-                </ul>
-            </section>
-            <section id="recently-posts"></section>
+        <div class="uk-width-1-1 uk-width-medium-2-10">
+            <div class="uk-grid">
+                <div class="uk-width-2-3 uk-width-medium-1-1">
+                    <section id="recently-posts">Now Loading...</section>
+                </div>
+                <div class="uk-width-1-3 uk-width-medium-1-1">
+                    <section id="links">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">GitHub</a></li>
+                            <li><a href="">SlideShare</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
         </div>
-        <div class="uk-width-8-10">
-            <section id="entries"></section>
+        <div class="uk-width-1-1 uk-width-medium-8-10">
+            <section id="entries">Now Loading...</section>
+
             <footer>
                 <p>
-                    This project is maintained by <a
-                        href="https://github.com/making">making</a>
-                </p>
-
-                <p>
                     <small>Hosted on GitHub Pages &mdash; Theme by <a
-                            href="https://github.com/orderedlist">orderedlist</a></small>
+                            href="https://github.com/orderedlist">orderedlist</a>
+                        &nbsp;
+                        <a href="https://github.com/making/categolj2-frontend">View the Project on GitHub
+                            making/categolj2-frontend</a>
+                    </small>
                 </p>
             </footer>
         </div>
@@ -75,9 +83,18 @@
         <p class="uk-article-lead">
             {{contents}}
         </p>
-        <hr class="uk-article-divider">
     </article>
     {{/each}}
+    <ul class="uk-pagination uk-pagination-left">
+        <li class="uk-disabled"><span>«</span></li>
+        <li class="uk-active"><span>1</span></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><span>...</span></li>
+        <li><a href="#">20</a></li>
+        <li><a href="#">»</a></li>
+    </ul>
 </script>
 
 <script src="javascripts/scale.fix.js"></script>
