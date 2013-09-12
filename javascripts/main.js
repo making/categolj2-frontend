@@ -13,7 +13,7 @@ $(function () {
             var category = categories[i];
             categoriesBuf.push(Handlebars.Utils.escapeExpression(category.category_name));
 
-            ret.push('<a href="categories/' + categoriesBuf.join(sep) + '">'
+            ret.push('<a href="categories/' + encodeURIComponent(categoriesBuf.join(sep)) + '/entries">'
                 + Handlebars.Utils.escapeExpression(category.category_name)
                 + '</a>');
         }
