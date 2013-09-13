@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/categolj2.js" afterPath="$PROJECT_DIR$/javascripts/categolj2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1378999629779" ignored="false" />
     <file path="/entries.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1378775827767" ignored="false" />
     <file path="/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379097618256" ignored="false" />
-    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379097038633" ignored="false" />
-    <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379097547989" ignored="false" />
+    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379098027462" ignored="false" />
+    <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379098966197" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,25 +75,34 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="105" selection-start="449" selection-end="449" vertical-scroll-proportion="46.583332">
+            <state line="89" column="39" selection-start="3238" selection-end="3238" vertical-scroll-proportion="-4.0416665">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="70" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+            <state line="56" column="12" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.6983806">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="categolj2.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="categolj2.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="58" selection-start="945" selection-end="945" vertical-scroll-proportion="0.8785425">
+            <state line="21" column="98" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backbone-1.0.0.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="628" column="4" selection-start="23218" selection-end="23218" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,15 +129,15 @@
         <option value="$PROJECT_DIR$/dummy/entries.json" />
         <option value="$PROJECT_DIR$/dummyapi/recent_posts.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries.json" />
-        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
         <option value="$PROJECT_DIR$/javascripts/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="195" />
-    <option name="y" value="42" />
+    <option name="x" value="93" />
+    <option name="y" value="45" />
     <option name="width" value="1086" />
     <option name="height" value="642" />
   </component>
@@ -382,7 +390,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="195" y="42" width="1086" height="642" extended-state="0" />
+    <frame x="93" y="45" width="1086" height="642" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -554,28 +562,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1133" column="103" selection-start="42287" selection-end="42287" vertical-scroll-proportion="-12.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="70" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="105" selection-start="449" selection-end="449" vertical-scroll-proportion="46.583332">
+        <state line="628" column="4" selection-start="23218" selection-end="23218" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="58" selection-start="945" selection-end="945" vertical-scroll-proportion="0.8785425">
+        <state line="21" column="98" selection-start="603" selection-end="603" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="39" selection-start="3238" selection-end="3238" vertical-scroll-proportion="-4.0416665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="12" selection-start="1858" selection-end="1858" vertical-scroll-proportion="0.6983806">
           <folding />
         </state>
       </provider>

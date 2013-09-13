@@ -41,7 +41,25 @@ var Router = Backbone.Router.extend({
         });
     },
     showEntry: function (id) {
-        var entry = this.entries.where({entry_id: Number(id)})[0];
+        var entry;
+        if (this.entries) {
+            var tmp = this.entries.where({entry_id: Number(id)});
+            if (tmp.length == 1) {
+                entry = tmp[0]
+            }
+        }
+
+        if (!entry) {
+            entry = new categolj2.Entry();
+            entry.fetch({
+                url: 'https://s3-ap-northeast-1.amazonaws.com/dummyapi/entries/' + id + '.json',
+                async: false
+            });
+            if (this.entries) {
+                this.entries.add(entry);
+            }
+        }
+        console.log(entry);
         var entryView = new categolj2.EntryView({
             model: entry
         });
