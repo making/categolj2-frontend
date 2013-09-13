@@ -1,32 +1,45 @@
+Handlebars.registerHelper('categoryLink', function (categories) {
+    var ret = [], categoriesBuf = [], sep = '::';
+    for (var i = 0; i < categories.length; i++) {
+        var category = categories[i];
+        categoriesBuf.push(_.escape(category.category_name));
+
+        ret.push('<a href="categories/' + encodeURIComponent(categoriesBuf.join(sep)) + '/entries">'
+            + _.escape(category.category_name)
+            + '</a>');
+    }
+    return new Handlebars.SafeString(ret.join(sep));
+});
+
+var Router = Backbone.Router.extend({
+    routes: {
+        '': 'showEntries'
+    },
+    initialize: function () {
+        this.recentPosts = new categolj2.RecentPosts();
+        this.recentPostsView = new categolj2.RecentPostsView({
+            collection: this.recentPosts
+        });
+
+        var that = this;
+        this.recentPosts.fetch().success(function () {
+            that.recentPostsView.render();
+        });
+    },
+    showEntries: function () {
+        this.entries = new categolj2.Entries();
+        this.entriesView = new categolj2.EntriesView({
+            collection: this.entries
+        });
+
+        var that = this;
+        this.entries.fetch().success(function () {
+            that.entriesView.render();
+        });
+    }
+});
+
+var router = new Router();
 $(function () {
-    Handlebars.registerHelper('categoryLink', function (categories) {
-        var ret = [], categoriesBuf = [], sep = '::';
-        for (var i = 0; i < categories.length; i++) {
-            var category = categories[i];
-            categoriesBuf.push(Handlebars.Utils.escapeExpression(category.category_name));
-
-            ret.push('<a href="categories/' + encodeURIComponent(categoriesBuf.join(sep)) + '/entries">'
-                + Handlebars.Utils.escapeExpression(category.category_name)
-                + '</a>');
-        }
-        return new Handlebars.SafeString(ret.join(sep));
-    });
-
-    $.getJSON('https://s3-ap-northeast-1.amazonaws.com/dummyapi/entries.json').success(function (data) {
-        var recentPosts = new categolj2.RecentPosts(_.map(data.recent_post, function (e) {
-            return new categolj2.RecentPost(e);
-        }));
-        var recentPostsView = new categolj2.RecentPostsView({
-            collection: recentPosts
-        });
-        recentPostsView.render();
-
-        var entries = new categolj2.Entries(_.map(data.entries, function (e) {
-            return new categolj2.Entry(e);
-        }));
-        var entriesView = new categolj2.EntriesView({
-            collection: entries
-        });
-        entriesView.render();
-    });
+    Backbone.history.start();
 });

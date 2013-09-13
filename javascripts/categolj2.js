@@ -8,9 +8,11 @@ categolj2.RecentPost = Backbone.Model.extend({
 
 // Collections
 categolj2.Entries = Backbone.Collection.extend({
+    url: 'https://s3-ap-northeast-1.amazonaws.com/dummyapi/entries.json',
     model: categolj2.Entry
 });
 categolj2.RecentPosts = Backbone.Collection.extend({
+    url: 'https://s3-ap-northeast-1.amazonaws.com/dummyapi/recent_posts.json',
     model: categolj2.RecentPost
 });
 
@@ -28,7 +30,7 @@ categolj2.RecentPostsView = Backbone.View.extend({
     el: $('#recent-posts'),
     template: Handlebars.compile($('#recent-posts-tmpl').html()),
     render: function () {
-        this.$el.html(this.template({recent_post: this.collection.toJSON()}));
+        this.$el.html(this.template({recent_posts: this.collection.toJSON()}));
         return this;
     }
 });

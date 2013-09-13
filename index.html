@@ -69,14 +69,14 @@
     <h3>Recent Posts</h3>
     <ul>
         {{#each recent_posts}}
-        <li><a href="entries/{{entry_id}}">{{title}}</a></li>
+        <li><a href="entries/{{entry_id}}" class="entry-title">{{title}}</a></li>
         {{/each}}
     </ul>
 </script>
 <script type="text/x-handlebars-template" id="entries-tmpl">
     {{#each entries}}
     <article class="uk-article">
-        <h3 class="uk-article-title"><a href="entries/{{entry_id}}">{{title}}</a></h3>
+        <h3 class="uk-article-title"><a href="entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
 
         <p class="uk-article-meta">{{updated_at}} by <a href="users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
             &nbsp; category: {{categoryLink categories}}</p>
