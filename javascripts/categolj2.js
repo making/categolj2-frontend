@@ -18,10 +18,19 @@ categolj2.RecentPosts = Backbone.Collection.extend({
 
 // Views
 categolj2.EntriesView = Backbone.View.extend({
-    el: $('#entries'),
+    el: $('#main'),
     template: Handlebars.compile($('#entries-tmpl').html()),
     render: function () {
         this.$el.html(this.template({entries: this.collection.toJSON()}));
+        return this;
+    }
+});
+
+categolj2.EntryView = Backbone.View.extend({
+    el: $('#main'),
+    template: Handlebars.compile($('#entry-tmpl').html()),
+    render: function () {
+        this.$el.html(this.template(this.model.toJSON()));
         return this;
     }
 });

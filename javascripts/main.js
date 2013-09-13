@@ -4,7 +4,7 @@ Handlebars.registerHelper('categoryLink', function (categories) {
         var category = categories[i];
         categoriesBuf.push(_.escape(category.category_name));
 
-        ret.push('<a href="categories/' + encodeURIComponent(categoriesBuf.join(sep)) + '/entries">'
+        ret.push('<a href="#categories/' + encodeURIComponent(categoriesBuf.join(sep)) + '/entries">'
             + _.escape(category.category_name)
             + '</a>');
     }
@@ -13,7 +13,11 @@ Handlebars.registerHelper('categoryLink', function (categories) {
 
 var Router = Backbone.Router.extend({
     routes: {
-        '': 'showEntries'
+        '': 'showEntries',
+        'entries/:id': 'showEntry',
+        'categories': 'showEntries',
+        'categories/:categories/entries': 'showEntries',
+        'users/:id/entries': 'showEntries'
     },
     initialize: function () {
         this.recentPosts = new categolj2.RecentPosts();
@@ -28,14 +32,20 @@ var Router = Backbone.Router.extend({
     },
     showEntries: function () {
         this.entries = new categolj2.Entries();
-        this.entriesView = new categolj2.EntriesView({
+        var entriesView = new categolj2.EntriesView({
             collection: this.entries
         });
 
-        var that = this;
         this.entries.fetch().success(function () {
-            that.entriesView.render();
+            entriesView.render();
         });
+    },
+    showEntry: function (id) {
+        var entry = this.entries.where({entry_id: Number(id)})[0];
+        var entryView = new categolj2.EntryView({
+            model: entry
+        });
+        entryView.render();
     }
 });
 
