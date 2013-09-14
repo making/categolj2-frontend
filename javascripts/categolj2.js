@@ -73,6 +73,23 @@ categolj2.CategoriesView = Backbone.View.extend({
     }
 });
 
+categolj2.CategoryView = Backbone.View.extend({
+    tagName: 'div',
+    render: function () {
+        this.$el.append($('<h2>').text(this.options.category));
+        var entries = new categolj2.Entries();
+        var entriesView = new categolj2.EntriesView({
+            collection: entries
+        });
+        var that = this;
+        entries.fetch().success(function () {
+            that.$el.append(entriesView.render().el);
+        });
+        console.log(this.$el.html());
+        return this;
+    }
+});
+
 categolj2.LinksView = Backbone.View.extend({
     el: $('#links'),
     template: Handlebars.compile($('#links-tmpl').html()),

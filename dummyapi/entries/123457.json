@@ -1,7 +1,7 @@
 {
   "entry_id":123457,
-  "title":"Hello world!",
-  "contents":"Hello!Hello!Hello!",
+  "title":"Foo Foo!",
+  "contents":"foo!foo!",
   "category":[
     {
       "category_id":1,
