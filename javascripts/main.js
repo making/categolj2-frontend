@@ -10,12 +10,14 @@ Handlebars.registerHelper('categoryLink', function (categories) {
     }
     return new Handlebars.SafeString(ret.join(sep));
 });
-
+Handlebars.registerHelper('toString', function (obj) {
+    return JSON.stringify(obj);
+});
 var Router = Backbone.Router.extend({
     routes: {
         '': 'showEntries',
         'entries/:id': 'showEntry',
-        'categories': 'showEntries',
+        'categories': 'showCategories',
         'categories/:categories/entries': 'showEntries',
         'users/:id/entries': 'showEntries'
     },
@@ -29,6 +31,8 @@ var Router = Backbone.Router.extend({
         this.recentPosts.fetch().success(function () {
             that.recentPostsView.render();
         });
+
+        this.mainView = new categolj2.MainView();
     },
     showEntries: function () {
         this.entries = new categolj2.Entries();
@@ -36,34 +40,41 @@ var Router = Backbone.Router.extend({
             collection: this.entries
         });
 
+        var that = this;
         this.entries.fetch().success(function () {
-            entriesView.render();
+            that.mainView.$el.html(entriesView.render().el);
         });
     },
     showEntry: function (id) {
         var entry;
         if (this.entries) {
-            var tmp = this.entries.where({entry_id: Number(id)});
-            if (tmp.length == 1) {
-                entry = tmp[0]
-            }
+            entry = this.entries.where({entry_id: Number(id)}, true);
         }
 
         if (!entry) {
             entry = new categolj2.Entry();
             entry.fetch({
-                url: 'https://s3-ap-northeast-1.amazonaws.com/dummyapi/entries/' + id + '.json',
+                url: categolj2.apiRoot + '/entries/' + id + '.json',
                 async: false
             });
             if (this.entries) {
                 this.entries.add(entry);
             }
         }
-        console.log(entry);
         var entryView = new categolj2.EntryView({
             model: entry
         });
-        entryView.render();
+        this.mainView.$el.html(entryView.render().el);
+    },
+    showCategories: function () {
+        var categories = new categolj2.Categories();
+        var categoriesView = new categolj2.CategoriesView({
+            collection: categories
+        });
+        var that = this;
+        categories.fetch().success(function () {
+            that.mainView.$el.html(categoriesView.render().el);
+        });
     }
 });
 

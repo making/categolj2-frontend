@@ -79,7 +79,7 @@
         <h3 class="uk-article-title"><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
 
         <p class="uk-article-meta">{{updated_at}} by <a href="#users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
-            &nbsp; category: {{categoryLink categories}}</p>
+            &nbsp; category: {{categoryLink category}}</p>
 
         <p class="uk-article-lead">
             {{contents}}
@@ -92,12 +92,20 @@
         <h3 class="uk-article-title"><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
 
         <p class="uk-article-meta">{{updated_at}} by <a href="#users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
-            &nbsp; category: {{categoryLink categories}}</p>
+            &nbsp; category: {{categoryLink category}}</p>
 
         <p class="uk-article-lead">
             {{contents}}
         </p>
     </article>
+</script>
+<script type="text/x-handlebars-template" id="categories-tmpl">
+    <h2>All Categories</h2>
+    <ul>
+        {{#each categories}}
+         <li>{{categoryLink category}}</li>
+        {{/each}}
+    </ul>
 </script>
 
 <script src="javascripts/scale.fix.js"></script>

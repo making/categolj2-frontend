@@ -2,7 +2,7 @@
   "entry_id":123457,
   "title":"Hello world!",
   "contents":"Hello!Hello!Hello!",
-  "categories":[
+  "category":[
     {
       "category_id":1,
       "category_name":"Aaa"
