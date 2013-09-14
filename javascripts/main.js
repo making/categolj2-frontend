@@ -33,6 +33,14 @@ var Router = Backbone.Router.extend({
         });
 
         this.mainView = new categolj2.MainView();
+
+        var links = new categolj2.Links();
+        links.fetch().success(function () {
+            var linksView = new categolj2.LinksView({
+                collection: links
+            });
+            linksView.render();
+        });
     },
     showEntries: function () {
         this.entries = new categolj2.Entries();

@@ -36,14 +36,7 @@
                     <section id="recent-posts"><i class="uk-icon-spinner uk-icon-spin"></i></section>
                 </div>
                 <div class="uk-width-1-2 uk-width-medium-1-1">
-                    <section id="links">
-                        <h3>Links</h3>
-                        <ul>
-                            <li><a href="">Twitter</a></li>
-                            <li><a href="">GitHub</a></li>
-                            <li><a href="">SlideShare</a></li>
-                        </ul>
-                    </section>
+                    <section id="links"/>
                 </div>
             </div>
         </div>
@@ -103,7 +96,15 @@
     <h2>All Categories</h2>
     <ul>
         {{#each categories}}
-         <li>{{categoryLink category}}</li>
+        <li>{{categoryLink category}}</li>
+        {{/each}}
+    </ul>
+</script>
+<script type="text/x-handlebars-template" id="links-tmpl">
+    <h3>Links</h3>
+    <ul>
+        {{#each links}}
+        <li><a href="{{url}}">{{link_name}}</a></li>
         {{/each}}
     </ul>
 </script>
