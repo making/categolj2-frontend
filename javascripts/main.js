@@ -72,7 +72,7 @@ var Router = Backbone.Router.extend({
         if (!entry) {
             entry = new categolj2.Entry();
             entry.fetch({
-                url: categolj2.API_ROOT + '/entries/' + id + '.json',
+                url: categolj2.API_ROOT + '/entries/' + encodeURIComponent(id) + '.json',
                 async: false
             });
             if (this.entries) {

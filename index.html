@@ -16,7 +16,7 @@
 <body>
 <div class="uk-container uk-container-center">
     <header>
-        <h1><a href="index.html">CategoLJ2</a></h1>
+        <h1><a href=".">CategoLJ2</a></h1>
 
         <p>@making's Tech memo</p>
 
@@ -66,7 +66,7 @@
 </script>
 <script type="text/x-handlebars-template" id="entries-tmpl">
     {{#each entries}}
-    <article class="uk-article">
+    <article class="uk-article uk-panel uk-panel-box">
         <h3 class="uk-article-title"><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
 
         <p class="uk-article-meta">{{updated_at}} by <a href="#users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
@@ -79,7 +79,7 @@
     {{/each}}
 </script>
 <script type="text/x-handlebars-template" id="entry-tmpl">
-    <article class="uk-article">
+    <article class="uk-article uk-panel uk-panel-box">
         <h3 class="uk-article-title"><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
 
         <p class="uk-article-meta">{{updated_at}} by <a href="#users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
