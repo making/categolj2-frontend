@@ -1,7 +1,8 @@
 var categolj2 = {};
 
-//categolj2.apiRoot = 'https://s3-ap-northeast-1.amazonaws.com/dummyapi';
-categolj2.apiRoot = './dummyapi';
+//categolj2.API_ROOT = 'https://s3-ap-northeast-1.amazonaws.com/dummyapi';
+categolj2.API_ROOT = './dummyapi';
+categolj2.SEPARATOR = '::';
 
 // Models
 categolj2.Entry = Backbone.Model.extend({
@@ -15,19 +16,19 @@ categolj2.Link = Backbone.Model.extend({
 
 // Collections
 categolj2.Entries = Backbone.Collection.extend({
-    url: categolj2.apiRoot + '/entries.json',
+    url: categolj2.API_ROOT + '/entries.json',
     model: categolj2.Entry
 });
 categolj2.RecentPosts = Backbone.Collection.extend({
-    url: categolj2.apiRoot + '/recent_posts.json',
+    url: categolj2.API_ROOT + '/recent_posts.json',
     model: categolj2.RecentPost
 });
 categolj2.Categories = Backbone.Collection.extend({
-    url: categolj2.apiRoot + '/categories.json',
+    url: categolj2.API_ROOT + '/categories.json',
     model: categolj2.Category
 });
 categolj2.Links = Backbone.Collection.extend({
-    url: categolj2.apiRoot + '/links.json',
+    url: categolj2.API_ROOT + '/links.json',
     model: categolj2.Link
 });
 
@@ -75,8 +76,10 @@ categolj2.CategoriesView = Backbone.View.extend({
 
 categolj2.CategoryView = Backbone.View.extend({
     tagName: 'div',
+    template: Handlebars.compile($('#category-tmpl').html()),
     render: function () {
-        this.$el.append($('<h2>').text(this.options.category));
+        var category =  this.options.category.split(categolj2.SEPARATOR);
+        this.$el.append(this.template({category: category}));
         var entries = new categolj2.Entries();
         var entriesView = new categolj2.EntriesView({
             collection: entries

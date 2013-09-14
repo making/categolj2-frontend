@@ -1,14 +1,24 @@
-Handlebars.registerHelper('categoryLink', function (categories) {
-    var ret = [], categoriesBuf = [], sep = '::';
-    for (var i = 0; i < categories.length; i++) {
-        var category = categories[i];
-        categoriesBuf.push(_.escape(category.category_name));
+Handlebars.registerHelper('categoryLink', function (category) {
+    var ret = [], categoriesBuf = [];
+    for (var i = 0; i < category.length; i++) {
+        var c = category[i];
+        categoriesBuf.push(_.escape(c.category_name));
 
-        ret.push('<a href="#categories/' + encodeURIComponent(categoriesBuf.join(sep)) + '/entries">'
-            + _.escape(category.category_name)
-            + '</a>');
+        ret.push('<a href="#categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
+            + _.escape(c.category_name) + '</a>');
     }
-    return new Handlebars.SafeString(ret.join(sep));
+    return new Handlebars.SafeString(ret.join(categolj2.SEPARATOR));
+});
+Handlebars.registerHelper('breadcrumb', function (category) {
+    var ret = [], categoriesBuf = [];
+    for (var i = 0; i < category.length; i++) {
+        var c = category[i];
+        categoriesBuf.push(_.escape(c));
+
+        ret.push('<li><a href="#categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
+            + _.escape(c) + '</a></li>');
+    }
+    return new Handlebars.SafeString(ret.join(''));
 });
 Handlebars.registerHelper('toString', function (obj) {
     return JSON.stringify(obj);
@@ -62,7 +72,7 @@ var Router = Backbone.Router.extend({
         if (!entry) {
             entry = new categolj2.Entry();
             entry.fetch({
-                url: categolj2.apiRoot + '/entries/' + id + '.json',
+                url: categolj2.API_ROOT + '/entries/' + id + '.json',
                 async: false
             });
             if (this.entries) {
@@ -84,7 +94,7 @@ var Router = Backbone.Router.extend({
             that.mainView.$el.html(categoriesView.render().el);
         });
     },
-    showCategory: function(category) {
+    showCategory: function (category) {
         var categoryView = new categolj2.CategoryView({
             category: category
         });
