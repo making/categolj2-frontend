@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/entries.json" afterPath="$PROJECT_DIR$/dummyapi/entries.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/categolj2.js" afterPath="$PROJECT_DIR$/javascripts/categolj2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/main.js" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,64 +77,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="entries.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dummyapi/entries.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="26" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.2072434">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="categolj2.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="102" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.0">
+            <state line="76" column="25" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="115" selection-start="3815" selection-end="3815" vertical-scroll-proportion="-16.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="117" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recent_posts.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dummyapi/recent_posts.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="-4.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="123458.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dummyapi/entries/123458.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="121" selection-start="245" selection-end="245" vertical-scroll-proportion="-8.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="123457.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dummyapi/entries/123457.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="-6.25">
+            <state line="96" column="8" selection-start="3254" selection-end="3254" vertical-scroll-proportion="2.5834932">
               <folding />
             </state>
           </provider>
@@ -165,10 +121,10 @@
         <option value="$PROJECT_DIR$/dummyapi/entries/123457.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries/123458.json" />
         <option value="$PROJECT_DIR$/dummyapi/recent_posts.json" />
-        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/javascripts/main.js" />
         <option value="$PROJECT_DIR$/dummyapi/entries.json" />
+        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
+        <option value="$PROJECT_DIR$/javascripts/main.js" />
       </list>
     </option>
   </component>
@@ -585,44 +541,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="102" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="115" selection-start="3815" selection-end="3815" vertical-scroll-proportion="-16.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="117" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+        <state line="108" column="115" selection-start="3815" selection-end="3815" vertical-scroll-proportion="0.8057851">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dummyapi/recent_posts.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="-4.375">
+        <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.2112676">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dummyapi/entries/123458.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="121" selection-start="245" selection-end="245" vertical-scroll-proportion="-8.75">
+        <state line="14" column="121" selection-start="245" selection-end="245" vertical-scroll-proportion="0.4225352">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dummyapi/entries/123457.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="-6.25">
+        <state line="10" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="0.30181086">
           <folding />
         </state>
       </provider>
@@ -630,6 +572,20 @@
     <entry file="file://$PROJECT_DIR$/dummyapi/entries.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="26" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.2072434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="25" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="8" selection-start="3254" selection-end="3254" vertical-scroll-proportion="2.5834932">
           <folding />
         </state>
       </provider>

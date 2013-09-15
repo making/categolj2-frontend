@@ -74,7 +74,7 @@ categolj2.CategoriesView = Backbone.View.extend({
     }
 });
 
-categolj2.CategoryView = Backbone.View.extend({
+categolj2.EntriesByCategoryView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#category-tmpl').html()),
     render: function () {

@@ -28,7 +28,7 @@ var Router = Backbone.Router.extend({
         '': 'showEntries',
         'entries/:id': 'showEntry',
         'categories': 'showCategories',
-        'categories/:categories/entries': 'showCategory',
+        'categories/:categories/entries': 'showEntriesByCategory',
         'users/:id/entries': 'showEntries'
     },
     initialize: function () {
@@ -94,8 +94,8 @@ var Router = Backbone.Router.extend({
             that.mainView.$el.html(categoriesView.render().el);
         });
     },
-    showCategory: function (category) {
-        var categoryView = new categolj2.CategoryView({
+    showEntriesByCategory: function (category) {
+        var categoryView = new categolj2.EntriesByCategoryView({
             category: category
         });
         this.mainView.$el.html(categoryView.render().el);
