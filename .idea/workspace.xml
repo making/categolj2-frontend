@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/entries.json" afterPath="$PROJECT_DIR$/dummyapi/entries.json" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,10 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="entries.json" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="entries.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dummyapi/entries.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="112" selection-start="483" selection-end="483" vertical-scroll-proportion="-11.875">
+            <state line="2" column="26" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.2072434">
               <folding />
             </state>
           </provider>
@@ -104,10 +103,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="33" selection-start="736" selection-end="736" vertical-scroll-proportion="0.4894434">
+            <state line="16" column="117" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recent_posts.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dummyapi/recent_posts.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="-4.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="123458.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dummyapi/entries/123458.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="121" selection-start="245" selection-end="245" vertical-scroll-proportion="-8.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="123457.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dummyapi/entries/123457.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="-6.25">
               <folding />
             </state>
           </provider>
@@ -138,17 +164,17 @@
         <option value="$PROJECT_DIR$/dummyapi/links.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries/123457.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries/123458.json" />
-        <option value="$PROJECT_DIR$/dummyapi/entries.json" />
         <option value="$PROJECT_DIR$/dummyapi/recent_posts.json" />
         <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascripts/main.js" />
+        <option value="$PROJECT_DIR$/dummyapi/entries.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="185" />
-    <option name="y" value="31" />
+    <option name="x" value="203" />
+    <option name="y" value="88" />
     <option name="width" value="1224" />
     <option name="height" value="669" />
   </component>
@@ -223,6 +249,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dummyapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categolj2-frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categolj2-frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dummyapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,7 +427,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="185" y="31" width="1224" height="669" extended-state="0" />
+    <frame x="203" y="88" width="1224" height="669" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18214937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -527,30 +571,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123457.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="420" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dummyapi/entries/123456.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="434" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123458.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="115" selection-start="145" selection-end="145" vertical-scroll-proportion="0.32307693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/recent_posts.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.34768212">
           <folding />
         </state>
       </provider>
@@ -569,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/entries.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="112" selection-start="483" selection-end="483" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="115" selection-start="3815" selection-end="3815" vertical-scroll-proportion="-16.25">
@@ -585,7 +601,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="33" selection-start="736" selection-end="736" vertical-scroll-proportion="0.4894434">
+        <state line="16" column="117" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/recent_posts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123458.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="121" selection-start="245" selection-end="245" vertical-scroll-proportion="-8.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123457.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/entries.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="26" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.2072434">
           <folding />
         </state>
       </provider>
