@@ -4,7 +4,7 @@ Handlebars.registerHelper('categoryLink', function (category) {
         var c = category[i];
         categoriesBuf.push(_.escape(c.category_name));
 
-        ret.push('<a href="#categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
+        ret.push('<a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
             + _.escape(c.category_name) + '</a>');
     }
     return new Handlebars.SafeString(ret.join(categolj2.SEPARATOR));
@@ -15,7 +15,7 @@ Handlebars.registerHelper('breadcrumb', function (category) {
         var c = category[i];
         categoriesBuf.push(_.escape(c));
 
-        ret.push('<li><a href="#categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
+        ret.push('<li><a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
             + _.escape(c) + '</a></li>');
     }
     return new Handlebars.SafeString(ret.join(''));

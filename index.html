@@ -67,9 +67,9 @@
 <script type="text/x-handlebars-template" id="entries-tmpl">
     {{#each entries}}
     <article class="uk-article uk-panel uk-panel-box">
-        <h3 class="uk-article-title"><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
+        <h3 class="uk-article-title"><a href="#/entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
 
-        <p class="uk-article-meta">{{updated_at}} by <a href="#users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
+        <p class="uk-article-meta">{{updated_at}} by <a href="#/users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
             &nbsp; category: {{categoryLink category}}</p>
 
         <p class="uk-article-lead">
@@ -80,9 +80,9 @@
 </script>
 <script type="text/x-handlebars-template" id="entry-tmpl">
     <article class="uk-article uk-panel uk-panel-box">
-        <h3 class="uk-article-title"><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
+        <h3 class="uk-article-title"><a href="#/entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
 
-        <p class="uk-article-meta">{{updated_at}} by <a href="#users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
+        <p class="uk-article-meta">{{updated_at}} by <a href="#/users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
             &nbsp; category: {{categoryLink category}}</p>
 
         <p class="uk-article-lead">
