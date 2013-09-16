@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/categolj2.js" afterPath="$PROJECT_DIR$/javascripts/categolj2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/main.js" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1378999629779" ignored="false" />
     <file path="/entries.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166826822" ignored="false" />
-    <file path="/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379322127255" ignored="false" />
-    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379323878577" ignored="false" />
-    <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379322941017" ignored="false" />
+    <file path="/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379331730954" ignored="false" />
+    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379331427878" ignored="false" />
+    <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379331689971" ignored="false" />
     <file path="/categories.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166542181" ignored="false" />
     <file path="/123456.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166800941" ignored="false" />
     <file path="/123457.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166806102" ignored="false" />
@@ -80,25 +81,25 @@
       <file leaf-file-name="categolj2.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="33" selection-start="3241" selection-end="3241" vertical-scroll-proportion="-4.8076925">
+            <state line="39" column="43" selection-start="1075" selection-end="1075" vertical-scroll-proportion="2.8846154">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="16" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.43037975">
+            <state line="37" column="34" selection-start="1529" selection-end="1529" vertical-scroll-proportion="-0.7692308">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="94" selection-start="3334" selection-end="3334" vertical-scroll-proportion="-28.916666">
+            <state line="98" column="34" selection-start="3436" selection-end="3436" vertical-scroll-proportion="0.4921875">
               <folding />
             </state>
           </provider>
@@ -131,9 +132,9 @@
         <option value="$PROJECT_DIR$/dummyapi/entries/123458.json" />
         <option value="$PROJECT_DIR$/dummyapi/recent_posts.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries.json" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
         <option value="$PROJECT_DIR$/javascripts/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -560,23 +561,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="94" selection-start="3334" selection-end="3334" vertical-scroll-proportion="-28.916666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="33" selection-start="3241" selection-end="3241" vertical-scroll-proportion="-4.8076925">
+        <state line="39" column="43" selection-start="1075" selection-end="1075" vertical-scroll-proportion="2.8846154">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.43037975">
+        <state line="37" column="34" selection-start="1529" selection-end="1529" vertical-scroll-proportion="-0.7692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="34" selection-start="3436" selection-end="3436" vertical-scroll-proportion="0.4921875">
           <folding />
         </state>
       </provider>

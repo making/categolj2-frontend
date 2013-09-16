@@ -30,91 +30,24 @@ var Router = Backbone.Router.extend({
         'users/:id/entries': 'showEntries'
     },
     initialize: function () {
-        this.recentPosts = new categolj2.RecentPosts();
-        this.recentPostsView = new categolj2.RecentPostsView({
-            el: $('#recent-posts'),
-            collection: this.recentPosts
-        });
-
-        this.recentPosts.fetch().success(_.bind(function () {
-            this.recentPostsView.render();
-        }, this));
-
         this.mainView = new categolj2.MainView({
             el: $('#main')
         });
-        this.searchFormView = new categolj2.SearchFormView({
-            el: $('#search-form'),
-            mainView: this.mainView
-        });
-
-        var links = new categolj2.Links({
-            el: $('#links')
-        });
-        links.fetch().success(function () {
-            var linksView = new categolj2.LinksView({
-                collection: links
-            });
-            linksView.render();
-        });
     },
     showEntries: function (page, size) {
-        page = Number(page) || 1;
-        size = Number(size) || 10;
-        this.entries = new categolj2.Entries();
-        var entriesView = new categolj2.EntriesView({
-            collection: this.entries
-        });
-
-        this.entries.fetch().success(_.bind(function () {
-            this.mainView.$el.html(entriesView.render().el);
-        }, this));
+        this.mainView.showEntries(page, size);
     },
     showEntry: function (id) {
-        var entry;
-        if (this.entries) {
-            entry = this.entries.where({
-                entry_id: Number(id)
-            }, true);
-        }
-
-        if (!entry) {
-            entry = new categolj2.Entry({
-                id: id
-            });
-            entry.fetch({
-                async: false
-            });
-            if (this.entries) {
-                this.entries.add(entry);
-            }
-        }
-        var entryView = new categolj2.EntryView({
-            model: entry
-        });
-        this.mainView.$el.html(entryView.render().el);
+        this.mainView.showEntry(id);
     },
     showSearchResult: function (keyword) {
-        var searchResultView = new categolj2.SearchResultView({
-            keyword: keyword
-        });
-        this.mainView.$el.html(searchResultView.render().el);
+        this.mainView.showSearchResult(keyword);
     },
     showCategories: function () {
-        var categories = new categolj2.Categories();
-        var categoriesView = new categolj2.CategoriesView({
-            collection: categories
-        });
-
-        categories.fetch().success(_.bind(function () {
-            this.mainView.$el.html(categoriesView.render().el);
-        }, this));
+        this.mainView.showCategories();
     },
     showEntriesByCategory: function (category) {
-        var categoryView = new categolj2.EntriesByCategoryView({
-            category: category
-        });
-        this.mainView.$el.html(categoryView.render().el);
+        this.mainView.showEntriesByCategory(category);
     }
 });
 
