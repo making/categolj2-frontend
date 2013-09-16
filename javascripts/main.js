@@ -34,6 +34,7 @@ var Router = Backbone.Router.extend({
     initialize: function () {
         this.recentPosts = new categolj2.RecentPosts();
         this.recentPostsView = new categolj2.RecentPostsView({
+            el: $('#recent-posts'),
             collection: this.recentPosts
         });
 
@@ -42,9 +43,9 @@ var Router = Backbone.Router.extend({
             that.recentPostsView.render();
         });
 
-        this.mainView = new categolj2.MainView();
+        this.mainView = new categolj2.MainView({el: $('#main')});
 
-        var links = new categolj2.Links();
+        var links = new categolj2.Links({el: $('#links')});
         links.fetch().success(function () {
             var linksView = new categolj2.LinksView({
                 collection: links

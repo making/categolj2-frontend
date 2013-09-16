@@ -35,14 +35,17 @@ categolj2.Links = Backbone.Collection.extend({
 // Views
 
 categolj2.MainView = Backbone.View.extend({
-    el: $('#main')
 });
 
 categolj2.EntriesView = Backbone.View.extend({
     tagName: 'div',
-    template: Handlebars.compile($('#entries-tmpl').html()),
+    template: Handlebars.compile($('#entry-tmpl').html()),
     render: function () {
-        this.$el.html(this.template({entries: this.collection.toJSON()}));
+        var that = this;
+        var html = _.map(this.collection.models, function(entry) {
+            return that.template(entry.toJSON());
+        }).join('');
+        this.$el.html(html);
         return this;
     }
 });
@@ -57,7 +60,6 @@ categolj2.EntryView = Backbone.View.extend({
 });
 
 categolj2.RecentPostsView = Backbone.View.extend({
-    el: $('#recent-posts'),
     template: Handlebars.compile($('#recent-posts-tmpl').html()),
     render: function () {
         this.$el.html(this.template({recent_posts: this.collection.toJSON()}));
@@ -78,7 +80,7 @@ categolj2.EntriesByCategoryView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#category-tmpl').html()),
     render: function () {
-        var category =  this.options.category.split(categolj2.SEPARATOR);
+        var category = this.options.category.split(categolj2.SEPARATOR);
         this.$el.append(this.template({category: category}));
         var entries = new categolj2.Entries();
         var entriesView = new categolj2.EntriesView({
@@ -88,13 +90,19 @@ categolj2.EntriesByCategoryView = Backbone.View.extend({
         entries.fetch().success(function () {
             that.$el.append(entriesView.render().el);
         });
-        console.log(this.$el.html());
         return this;
     }
 });
 
+categolj2.EntriesByUserView = Backbone.View.extend({
+
+});
+
+categolj2.SearchFormView = Backbone.View.extend(
+
+);
+
 categolj2.LinksView = Backbone.View.extend({
-    el: $('#links'),
     template: Handlebars.compile($('#links-tmpl').html()),
     render: function () {
         this.$el.html(this.template({links: this.collection.toJSON()}));
