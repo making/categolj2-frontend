@@ -6,6 +6,9 @@ categolj2.SEPARATOR = '::';
 
 // Models
 categolj2.Entry = Backbone.Model.extend({
+    url: function () {
+        return categolj2.API_ROOT + '/entries/' + encodeURIComponent(this.id) + '.json';
+    }
 });
 categolj2.RecentPost = Backbone.Model.extend({
 });

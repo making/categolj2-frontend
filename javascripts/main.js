@@ -22,6 +22,7 @@ Handlebars.registerHelper('toString', function (obj) {
 var Router = Backbone.Router.extend({
     routes: {
         '': 'showEntries',
+        'entries?page.page=:page&page.size=:size': 'showEntries',
         'entries/:id': 'showEntry',
         'categories': 'showCategories',
         'categories/:categories/entries': 'showEntriesByCategory',
@@ -55,7 +56,9 @@ var Router = Backbone.Router.extend({
             linksView.render();
         });
     },
-    showEntries: function () {
+    showEntries: function (page, size) {
+        page = Number(page) || 1;
+        size = Number(size) || 10;
         this.entries = new categolj2.Entries();
         var entriesView = new categolj2.EntriesView({
             collection: this.entries
@@ -74,9 +77,10 @@ var Router = Backbone.Router.extend({
         }
 
         if (!entry) {
-            entry = new categolj2.Entry();
+            entry = new categolj2.Entry({
+                id: id
+            });
             entry.fetch({
-                url: categolj2.API_ROOT + '/entries/' + encodeURIComponent(id) + '.json',
                 async: false
             });
             if (this.entries) {
