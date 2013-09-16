@@ -87,7 +87,7 @@ categolj2.EntriesByCategoryView = Backbone.View.extend({
     template: Handlebars.compile($('#category-tmpl').html()),
     render: function () {
         var category = this.options.category.split(categolj2.SEPARATOR);
-        this.$el.empty().append(this.template({
+        this.$el.append(this.template({
             category: category
         }));
         var entries = new categolj2.Entries();
@@ -106,14 +106,25 @@ categolj2.EntriesByUserView = Backbone.View.extend({
 });
 
 categolj2.SearchFormView = Backbone.View.extend({
+    template: Handlebars.compile($('#search-result-tmpl').html()),
     events: {
         'submit': 'search'
     },
     search: function (e) {
         e.preventDefault();
-        alert('not implemented yet!');
-        var $target = $(e.target);
-        console.log($target.serializeArray());
+        var q = this.$('input[name=q]').val();
+        var $div = $('<div>');
+        $div.append(this.template({
+            keyword: q
+        }));
+        var entries = new categolj2.Entries();
+        var entriesView = new categolj2.EntriesView({
+            collection: entries
+        });
+        entries.fetch().success(_.bind(function () {
+            $div.append(entriesView.render().el);
+        }, this));
+        this.options.mainView.$el.html($div);
     }
 });
 

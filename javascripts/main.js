@@ -43,7 +43,8 @@ var Router = Backbone.Router.extend({
             el: $('#main')
         });
         this.searchFormView = new categolj2.SearchFormView({
-            el: $('#search-form')
+            el: $('#search-form'),
+            mainView : this.mainView
         });
 
         var links = new categolj2.Links({
