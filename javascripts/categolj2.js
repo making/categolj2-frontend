@@ -55,13 +55,13 @@ categolj2.AppView = Backbone.View.extend({
 
         var links = new categolj2.Links({
         });
-        links.fetch().success(function () {
+        links.fetch().success(_.bind(function () {
             var linksView = new categolj2.LinksView({
                 el: $('#links'),
                 collection: links
             });
             linksView.render();
-        });
+        }, this));
     },
     showEntries: function (page, size) {
         page = Number(page) || 1;
