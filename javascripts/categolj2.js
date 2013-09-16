@@ -41,10 +41,9 @@ categolj2.EntriesView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#entry-tmpl').html()),
     render: function () {
-        var that = this;
-        var html = _.map(this.collection.models, function(entry) {
-            return that.template(entry.toJSON());
-        }).join('');
+        var html = _.map(this.collection.models, _.bind(function (entry) {
+            return this.template(entry.toJSON());
+        }, this)).join('');
         this.$el.html(html);
         return this;
     }
@@ -62,7 +61,9 @@ categolj2.EntryView = Backbone.View.extend({
 categolj2.RecentPostsView = Backbone.View.extend({
     template: Handlebars.compile($('#recent-posts-tmpl').html()),
     render: function () {
-        this.$el.html(this.template({recent_posts: this.collection.toJSON()}));
+        this.$el.html(this.template({
+            recent_posts: this.collection.toJSON()
+        }));
         return this;
     }
 });
@@ -71,7 +72,9 @@ categolj2.CategoriesView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#categories-tmpl').html()),
     render: function () {
-        this.$el.html(this.template({categories: this.collection.toJSON()}));
+        this.$el.html(this.template({
+            categories: this.collection.toJSON()
+        }));
         return this;
     }
 });
@@ -81,15 +84,16 @@ categolj2.EntriesByCategoryView = Backbone.View.extend({
     template: Handlebars.compile($('#category-tmpl').html()),
     render: function () {
         var category = this.options.category.split(categolj2.SEPARATOR);
-        this.$el.append(this.template({category: category}));
+        this.$el.empty().append(this.template({
+            category: category
+        }));
         var entries = new categolj2.Entries();
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });
-        var that = this;
-        entries.fetch().success(function () {
-            that.$el.append(entriesView.render().el);
-        });
+        entries.fetch().success(_.bind(function () {
+            this.$el.append(entriesView.render().el);
+        }, this));
         return this;
     }
 });
@@ -98,14 +102,24 @@ categolj2.EntriesByUserView = Backbone.View.extend({
 
 });
 
-categolj2.SearchFormView = Backbone.View.extend(
-
-);
+categolj2.SearchFormView = Backbone.View.extend({
+    events: {
+        'submit': 'search'
+    },
+    search: function (e) {
+        e.preventDefault();
+        alert('not implemented yet!');
+        var $target = $(e.target);
+        console.log($target.serializeArray());
+    }
+});
 
 categolj2.LinksView = Backbone.View.extend({
     template: Handlebars.compile($('#links-tmpl').html()),
     render: function () {
-        this.$el.html(this.template({links: this.collection.toJSON()}));
+        this.$el.html(this.template({
+            links: this.collection.toJSON()
+        }));
         return this;
     }
 });

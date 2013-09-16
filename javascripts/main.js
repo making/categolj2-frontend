@@ -1,23 +1,19 @@
 Handlebars.registerHelper('categoryLink', function (category) {
     var ret = [], categoriesBuf = [];
-    for (var i = 0; i < category.length; i++) {
-        var c = category[i];
+    _.each(category, function (c) {
         categoriesBuf.push(_.escape(c.category_name));
-
         ret.push('<a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
             + _.escape(c.category_name) + '</a>');
-    }
+    });
     return new Handlebars.SafeString(ret.join(categolj2.SEPARATOR));
 });
 Handlebars.registerHelper('breadcrumb', function (category) {
     var ret = [], categoriesBuf = [];
-    for (var i = 0; i < category.length; i++) {
-        var c = category[i];
+    _.each(category, function (c) {
         categoriesBuf.push(_.escape(c));
-
         ret.push('<li><a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
             + _.escape(c) + '</a></li>');
-    }
+    });
     return new Handlebars.SafeString(ret.join(''));
 });
 Handlebars.registerHelper('toString', function (obj) {
@@ -38,14 +34,20 @@ var Router = Backbone.Router.extend({
             collection: this.recentPosts
         });
 
-        var that = this;
-        this.recentPosts.fetch().success(function () {
-            that.recentPostsView.render();
+        this.recentPosts.fetch().success(_.bind(function () {
+            this.recentPostsView.render();
+        }, this));
+
+        this.mainView = new categolj2.MainView({
+            el: $('#main')
+        });
+        this.searchFormView = new categolj2.SearchFormView({
+            el: $('#search-form')
         });
 
-        this.mainView = new categolj2.MainView({el: $('#main')});
-
-        var links = new categolj2.Links({el: $('#links')});
+        var links = new categolj2.Links({
+            el: $('#links')
+        });
         links.fetch().success(function () {
             var linksView = new categolj2.LinksView({
                 collection: links
@@ -59,15 +61,16 @@ var Router = Backbone.Router.extend({
             collection: this.entries
         });
 
-        var that = this;
-        this.entries.fetch().success(function () {
-            that.mainView.$el.html(entriesView.render().el);
-        });
+        this.entries.fetch().success(_.bind(function () {
+            this.mainView.$el.html(entriesView.render().el);
+        }, this));
     },
     showEntry: function (id) {
         var entry;
         if (this.entries) {
-            entry = this.entries.where({entry_id: Number(id)}, true);
+            entry = this.entries.where({
+                entry_id: Number(id)
+            }, true);
         }
 
         if (!entry) {
@@ -90,10 +93,10 @@ var Router = Backbone.Router.extend({
         var categoriesView = new categolj2.CategoriesView({
             collection: categories
         });
-        var that = this;
-        categories.fetch().success(function () {
-            that.mainView.$el.html(categoriesView.render().el);
-        });
+
+        categories.fetch().success(_.bind(function () {
+            this.mainView.$el.html(categoriesView.render().el);
+        }, this));
     },
     showEntriesByCategory: function (category) {
         var categoryView = new categolj2.EntriesByCategoryView({
