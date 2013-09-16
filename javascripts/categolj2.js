@@ -116,10 +116,16 @@ categolj2.AppView = Backbone.View.extend({
         }, this));
     },
     showEntriesByCategory: function (category) {
-        var categoryView = new categolj2.EntriesByCategoryView({
+        var entriesView = new categolj2.EntriesByCategoryView({
             category: category
         });
-        this.$el.html(categoryView.render().el);
+        this.$el.html(entriesView.render().el);
+    },
+    showEntriesByUser: function (user_id) {
+        var entriesView = new categolj2.EntriesByUserView({
+            user_id: user_id
+        });
+        this.$el.html(entriesView.render().el);
     }
 });
 
@@ -185,7 +191,18 @@ categolj2.EntriesByCategoryView = Backbone.View.extend({
 });
 
 categolj2.EntriesByUserView = Backbone.View.extend({
-
+    tagName: 'div',
+    template: Handlebars.compile($('#entries-by-user-tmpl').html()),
+    render: function () {
+        var entries = new categolj2.Entries();
+        var entriesView = new categolj2.EntriesView({
+            collection: entries
+        });
+        entries.fetch().success(_.bind(function () {
+            this.$el.append(entriesView.render().el);
+        }, this));
+        return this;
+    }
 });
 
 categolj2.SearchFormView = Backbone.View.extend({

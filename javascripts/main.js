@@ -27,7 +27,7 @@ var Router = Backbone.Router.extend({
         'entries?q=:keyword': 'showSearchResult',
         'categories': 'showCategories',
         'categories/:categories/entries': 'showEntriesByCategory',
-        'users/:id/entries': 'showEntries'
+        'users/:id/entries': 'showEntriesByUser'
     },
     initialize: function () {
         this.appView = new categolj2.AppView({
@@ -48,6 +48,9 @@ var Router = Backbone.Router.extend({
     },
     showEntriesByCategory: function (category) {
         this.appView.showEntriesByCategory(category);
+    },
+    showEntriesByUser: function (user_id) {
+        this.appView.showEntriesByUser(user_id);
     }
 });
 
