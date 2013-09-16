@@ -24,6 +24,7 @@ var Router = Backbone.Router.extend({
         '': 'showEntries',
         'entries?page.page=:page&page.size=:size': 'showEntries',
         'entries/:id': 'showEntry',
+        'entries?q=:keyword': 'showSearchResult',
         'categories': 'showCategories',
         'categories/:categories/entries': 'showEntriesByCategory',
         'users/:id/entries': 'showEntries'
@@ -44,7 +45,7 @@ var Router = Backbone.Router.extend({
         });
         this.searchFormView = new categolj2.SearchFormView({
             el: $('#search-form'),
-            mainView : this.mainView
+            mainView: this.mainView
         });
 
         var links = new categolj2.Links({
@@ -92,6 +93,12 @@ var Router = Backbone.Router.extend({
             model: entry
         });
         this.mainView.$el.html(entryView.render().el);
+    },
+    showSearchResult: function (keyword) {
+        var searchResultView = new categolj2.SearchResultView({
+            keyword: keyword
+        });
+        this.mainView.$el.html(searchResultView.render().el);
     },
     showCategories: function () {
         var categories = new categolj2.Categories();

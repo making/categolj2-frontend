@@ -113,18 +113,25 @@ categolj2.SearchFormView = Backbone.View.extend({
     search: function (e) {
         e.preventDefault();
         var q = this.$('input[name=q]').val();
-        var $div = $('<div>');
-        $div.append(this.template({
-            keyword: q
+        Backbone.history.navigate('entries?q=' + q, {trigger: true});
+    }
+});
+
+categolj2.SearchResultView = Backbone.View.extend({
+    template: Handlebars.compile($('#search-result-tmpl').html()),
+    tagName: 'div',
+    render: function () {
+        this.$el.append(this.template({
+            keyword: this.options.keyword
         }));
         var entries = new categolj2.Entries();
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });
         entries.fetch().success(_.bind(function () {
-            $div.append(entriesView.render().el);
+            this.$el.append(entriesView.render().el);
         }, this));
-        this.options.mainView.$el.html($div);
+        return this;
     }
 });
 
