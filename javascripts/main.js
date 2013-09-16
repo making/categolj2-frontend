@@ -30,24 +30,24 @@ var Router = Backbone.Router.extend({
         'users/:id/entries': 'showEntries'
     },
     initialize: function () {
-        this.mainView = new categolj2.MainView({
+        this.appView = new categolj2.AppView({
             el: $('#main')
         });
     },
     showEntries: function (page, size) {
-        this.mainView.showEntries(page, size);
+        this.appView.showEntries(page, size);
     },
     showEntry: function (id) {
-        this.mainView.showEntry(id);
+        this.appView.showEntry(id);
     },
     showSearchResult: function (keyword) {
-        this.mainView.showSearchResult(keyword);
+        this.appView.showSearchResult(keyword);
     },
     showCategories: function () {
-        this.mainView.showCategories();
+        this.appView.showCategories();
     },
     showEntriesByCategory: function (category) {
-        this.mainView.showEntriesByCategory(category);
+        this.appView.showEntriesByCategory(category);
     }
 });
 

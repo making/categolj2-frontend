@@ -37,7 +37,7 @@ categolj2.Links = Backbone.Collection.extend({
 
 // Views
 
-categolj2.MainView = Backbone.View.extend({
+categolj2.AppView = Backbone.View.extend({
     initialize: function () {
         this.recentPosts = new categolj2.RecentPosts();
         this.recentPostsView = new categolj2.RecentPostsView({
