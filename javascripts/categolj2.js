@@ -212,6 +212,7 @@ categolj2.SearchResultView = Backbone.View.extend({
             collection: entries
         });
         entries.fetch().success(_.bind(function () {
+            this.$el.focus();
             this.$el.append(entriesView.render().el);
         }, this));
         return this;
