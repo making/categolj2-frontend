@@ -194,6 +194,9 @@ categolj2.EntriesByUserView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#entries-by-user-tmpl').html()),
     render: function () {
+        this.$el.append(this.template({
+            username: 'User(' + this.options.user_id + ')'
+        }));
         var entries = new categolj2.Entries();
         var entriesView = new categolj2.EntriesView({
             collection: entries
