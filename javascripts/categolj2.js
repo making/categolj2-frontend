@@ -182,6 +182,8 @@ categolj2.EntriesByCategoryView = Backbone.View.extend({
             category: category
         }));
         var entries = new categolj2.Entries();
+        entries.url = categolj2.API_ROOT + '/categories/' + this.options.category + '/entries.json';
+
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });
@@ -200,6 +202,7 @@ categolj2.EntriesByUserView = Backbone.View.extend({
             username: 'User(' + this.options.user_id + ')'
         }));
         var entries = new categolj2.Entries();
+        entries.url = categolj2.API_ROOT + '/users/' + this.options.user_id + '/entries.json';
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });
@@ -230,6 +233,7 @@ categolj2.SearchResultView = Backbone.View.extend({
             keyword: this.options.keyword
         }));
         var entries = new categolj2.Entries();
+        entries.url = categolj2.API_ROOT + '/entries.json?q=' + encodeURIComponent(this.options.keyword);
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });
