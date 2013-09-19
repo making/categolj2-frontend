@@ -1,7 +1,9 @@
 var categolj2 = {};
 
 //categolj2.API_ROOT = 'https://s3-ap-northeast-1.amazonaws.com/dummyapi';
-categolj2.API_ROOT = './dummyapi';
+//categolj2.API_ROOT = './dummyapi';
+//categolj2.API_ROOT = 'http://localhost:8080/categolj/api';
+categolj2.API_ROOT = 'http://blog.ik.am/api';
 categolj2.SEPARATOR = '::';
 
 // Models

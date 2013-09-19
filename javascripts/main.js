@@ -16,6 +16,9 @@ Handlebars.registerHelper('breadcrumb', function (category) {
     });
     return new Handlebars.SafeString(ret.join(''));
 });
+Handlebars.registerHelper('unescape', function (string) {
+    return new Handlebars.SafeString(string);
+});
 Handlebars.registerHelper('toString', function (obj) {
     return JSON.stringify(obj);
 });
