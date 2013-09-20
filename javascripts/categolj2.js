@@ -134,12 +134,24 @@ categolj2.AppView = Backbone.View.extend({
 categolj2.EntriesView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#entry-tmpl').html()),
+    events: {
+        'click button': 'renderContents'
+    },
     render: function () {
         var html = _.map(this.collection.models, _.bind(function (entry) {
-            return this.template(entry.toJSON());
+            var attrs = _.extend({button: true}, entry.toJSON());
+            return this.template(attrs);
         }, this)).join('');
         this.$el.html(html);
         return this;
+    },
+    renderContents: function (e) {
+        var $button = $(e.target),
+            id = $button.data('id'),
+            entry = this.collection.where({
+                entry_id: Number(id)
+            }, true);
+        $button.parent().html(entry.get('contents'));
     }
 });
 
@@ -147,7 +159,8 @@ categolj2.EntryView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#entry-tmpl').html()),
     render: function () {
-        this.$el.html(this.template(this.model.toJSON()));
+        var attrs = _.extend({render: true}, this.model.toJSON());
+        this.$el.html(this.template(attrs));
         return this;
     }
 });

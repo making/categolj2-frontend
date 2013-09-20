@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/categolj2.js" afterPath="$PROJECT_DIR$/javascripts/categolj2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379336573972" ignored="false" />
     <file path="/entries.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166826822" ignored="false" />
-    <file path="/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379560619034" ignored="false" />
-    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379606709236" ignored="false" />
+    <file path="/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379653129924" ignored="false" />
+    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379653165300" ignored="false" />
     <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379560593751" ignored="false" />
     <file path="/categories.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166542181" ignored="false" />
     <file path="/123456.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166800941" ignored="false" />
@@ -79,19 +80,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="categolj2.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="categolj2.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="104" selection-start="7233" selection-end="7233" vertical-scroll-proportion="0.82185274">
+            <state line="18" column="108" selection-start="583" selection-end="583" vertical-scroll-proportion="-10.384615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="23" selection-start="2751" selection-end="2751" vertical-scroll-proportion="-46.25">
+            <state line="47" column="14" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.7128099">
               <folding />
             </state>
           </provider>
@@ -125,14 +126,14 @@
         <option value="$PROJECT_DIR$/dummyapi/recent_posts.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries.json" />
         <option value="$PROJECT_DIR$/javascripts/main.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="84" />
-    <option name="y" value="103" />
+    <option name="x" value="98" />
+    <option name="y" value="64" />
     <option name="width" value="1224" />
     <option name="height" value="669" />
   </component>
@@ -367,10 +368,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="84" y="103" width="1224" height="669" extended-state="0" />
+    <frame x="98" y="64" width="1224" height="669" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18214937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18214937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -388,7 +389,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16213922" sideWeight="0.81785065" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16213922" sideWeight="0.67030966" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -562,16 +563,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="23" selection-start="2751" selection-end="2751" vertical-scroll-proportion="-46.25">
+        <state line="18" column="108" selection-start="583" selection-end="583" vertical-scroll-proportion="-10.384615">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="104" selection-start="7233" selection-end="7233" vertical-scroll-proportion="0.82185274">
+        <state line="47" column="14" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.7128099">
           <folding />
         </state>
       </provider>

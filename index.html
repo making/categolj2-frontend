@@ -30,16 +30,6 @@
         </p>
     </header>
     <div class="uk-grid">
-        <div class="uk-width-1-1 uk-width-medium-2-10">
-            <div class="uk-grid">
-                <div class="uk-width-1-2 uk-width-medium-1-1">
-                    <section id="recent-posts"><i class="uk-icon-spinner uk-icon-spin"></i></section>
-                </div>
-                <div class="uk-width-1-2 uk-width-medium-1-1">
-                    <section id="links"/>
-                </div>
-            </div>
-        </div>
         <div class="uk-width-1-1 uk-width-medium-8-10">
             <section id="main"><i class="uk-icon-spinner uk-icon-spin"></i></section>
 
@@ -52,13 +42,18 @@
                 </p>
             </footer>
         </div>
+        <div class="uk-width-1-1 uk-width-medium-2-10">
+            <section id="recent-posts"><i class="uk-icon-spinner uk-icon-spin"></i></section>
+            <section id="links"/>
+        </div>
     </div>
+</div>
 </div>
 
 <!-- Templates -->
 <script type="text/x-handlebars-template" id="recent-posts-tmpl">
     <h3>Recent Posts</h3>
-    <ul>
+    <ul class="uk-list uk-list-line">
         {{#each recent_posts}}
         <li><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></li>
         {{/each}}
@@ -72,7 +67,15 @@
             &nbsp; category: {{categoryLink category}}</p>
 
         <p class="uk-article-lead">
+            {{#if render}}
             {{unescape contents}}
+            {{/if}}
+            {{#if button}}
+
+        <div>
+            <button class="uk-button uk-button-expand" type="button" data-id="{{entry_id}}">Read this article</button>
+        </div>
+        {{/if}}
         </p>
     </article>
 </script>
