@@ -37,6 +37,10 @@ categolj2.Links = Backbone.Collection.extend({
     model: categolj2.Link
 });
 
+function scroll() {
+    $('body').animate({scrollTop: 0}, 'fast');
+}
+
 // Views
 
 categolj2.AppView = Backbone.View.extend({
@@ -76,6 +80,7 @@ categolj2.AppView = Backbone.View.extend({
         this.entries.fetch().success(_.bind(function () {
             this.$el.html(entriesView.render().el);
         }, this));
+        scroll();
     },
     showEntry: function (id) {
         var entry;
@@ -100,12 +105,14 @@ categolj2.AppView = Backbone.View.extend({
             model: entry
         });
         this.$el.html(entryView.render().el);
+        scroll();
     },
     showSearchResult: function (keyword) {
         var searchResultView = new categolj2.SearchResultView({
             keyword: keyword
         });
         this.$el.html(searchResultView.render().el);
+        scroll();
     },
     showCategories: function () {
         var categories = new categolj2.Categories();
@@ -116,18 +123,21 @@ categolj2.AppView = Backbone.View.extend({
         categories.fetch().success(_.bind(function () {
             this.$el.html(categoriesView.render().el);
         }, this));
+        scroll();
     },
     showEntriesByCategory: function (category) {
         var entriesView = new categolj2.EntriesByCategoryView({
             category: category
         });
         this.$el.html(entriesView.render().el);
+        scroll();
     },
     showEntriesByUser: function (user_id) {
         var entriesView = new categolj2.EntriesByUserView({
             user_id: user_id
         });
         this.$el.html(entriesView.render().el);
+        scroll();
     }
 });
 
