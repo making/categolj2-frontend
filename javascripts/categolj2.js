@@ -277,3 +277,18 @@ categolj2.LinksView = Backbone.View.extend({
         return this;
     }
 });
+
+categolj2.LoadingView = Backbone.View.extend({
+    el: '#loading',
+    initialize: function () {
+        this.spinner = new Spinner();
+        $(document).ajaxStart(_.bind(this.spin, this));
+        $(document).ajaxComplete(_.bind(this.stop, this));
+    },
+    spin: function () {
+        this.spinner.spin(this.el);
+    },
+    stop: function () {
+        this.spinner.stop();
+    }
+})

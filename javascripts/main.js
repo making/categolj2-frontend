@@ -59,5 +59,6 @@ var Router = Backbone.Router.extend({
 
 var router = new Router();
 $(function () {
+    new categolj2.LoadingView();
     Backbone.history.start();
 });
