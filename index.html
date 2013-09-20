@@ -52,7 +52,7 @@
 <!-- Templates -->
 <script type="text/x-handlebars-template" id="recent-posts-tmpl">
     <h3>Recent Posts</h3>
-    <ul class="uk-list uk-list-line">
+    <ul class="uk-list uk-list-striped">
         {{#each recent_posts}}
         <li><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></li>
         {{/each}}
@@ -80,7 +80,7 @@
 </script>
 <script type="text/x-handlebars-template" id="categories-tmpl">
     <h2>All Categories</h2>
-    <ul>
+    <ul class="uk-list uk-list-striped">
         {{#each categories}}
         <li>{{categoryLink category}}</li>
         {{/each}}
