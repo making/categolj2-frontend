@@ -325,7 +325,7 @@ categolj2.SearchResultView = Backbone.View.extend({
 });
 
 categolj2.PaginationView = Backbone.View.extend({
-    maxDisplayCount: 10,
+    maxDisplayCount: 5,
     template: Handlebars.compile($('#pagination-tmpl').html()),
     events: {
         'click a.go-first': 'goFirst',
