@@ -8,6 +8,7 @@ categolj2.SEPARATOR = '::';
 
 // Models
 categolj2.Entry = Backbone.Model.extend({
+    idAttribute: 'entryId',
     url: function () {
         return categolj2.API_ROOT + '/entries/' + encodeURIComponent(this.id) + '.json';
     }
@@ -85,14 +86,12 @@ categolj2.AppView = Backbone.View.extend({
     showEntry: function (id) {
         var entry;
         if (this.entries) {
-            entry = this.entries.where({
-                entryId: Number(id)
-            }, true);
+            entry = this.entries.get(Number(id));
         }
 
         if (!entry) {
             entry = new categolj2.Entry({
-                id: id
+                entryId: id
             });
             entry.fetch({
                 async: false
@@ -168,9 +167,7 @@ categolj2.EntriesView = Backbone.View.extend({
     renderContents: function (e) {
         var $button = $(e.target),
             id = $button.data('id'),
-            entry = this.collection.where({
-                entryId: Number(id)
-            }, true);
+            entry = this.collection.get(Number(id));
         $button.parent().html(entry.get('contents'));
     }
 });
