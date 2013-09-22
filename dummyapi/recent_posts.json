@@ -1,22 +1,22 @@
 [
     {
-        "entry_id": 123458,
+        "entryId": 123458,
         "title": "Bar Bar!"
     },
     {
-        "entry_id": 123457,
+        "entryId": 123457,
         "title": "Foo Foo!"
     },
     {
-        "entry_id": 123456,
+        "entryId": 123456,
         "title": "Hello World!"
     },
     {
-        "entry_id": 123455,
+        "entryId": 123455,
         "title": "hoge"
     },
     {
-        "entry_id": 123454,
+        "entryId": 123454,
         "title": "foo"
     }
 ]

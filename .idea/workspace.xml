@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/entries/123456.json" afterPath="$PROJECT_DIR$/dummyapi/entries/123456.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/entries/123457.json" afterPath="$PROJECT_DIR$/dummyapi/entries/123457.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/entries/123458.json" afterPath="$PROJECT_DIR$/dummyapi/entries/123458.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/categolj2.js" afterPath="$PROJECT_DIR$/javascripts/categolj2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/categories.json" afterPath="$PROJECT_DIR$/dummyapi/categories.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/entries.json" afterPath="$PROJECT_DIR$/dummyapi/entries.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/links.json" afterPath="$PROJECT_DIR$/dummyapi/links.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummyapi/recent_posts.json" afterPath="$PROJECT_DIR$/dummyapi/recent_posts.json" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,6 +28,7 @@
     <file path="$PROJECT_DIR$/../making.github.com/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379337542882" ignored="false" />
     <file path="$PROJECT_DIR$/../making.github.com/javascripts/foo.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379336758840" ignored="false" />
     <file path="$PROJECT_DIR$/../making.github.com/sandbox/wordcount/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379338449692" ignored="false" />
+    <file path="/a.dummy" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379822474963" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,44 +88,7 @@
     <favorites_list name="categolj2-frontend" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="categolj2.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="273" column="26" selection-start="8547" selection-end="8547" vertical-scroll-proportion="0.45454547">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backbone-1.0.0.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="943" column="34" selection-start="34771" selection-end="34775" vertical-scroll-proportion="-6.1538463">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="116" selection-start="1269" selection-end="1269" vertical-scroll-proportion="-23.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascripts/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="104" selection-start="2021" selection-end="2021" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -135,22 +108,22 @@
       <list>
         <option value="$PROJECT_DIR$/dummy/entries.json" />
         <option value="$PROJECT_DIR$/dummyapi/categories.json.js" />
+        <option value="$PROJECT_DIR$/dummyapi/recent_posts.json" />
+        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
         <option value="$PROJECT_DIR$/dummyapi/categories.json" />
+        <option value="$PROJECT_DIR$/dummyapi/entries.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries/123456.json" />
-        <option value="$PROJECT_DIR$/dummyapi/links.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries/123457.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries/123458.json" />
-        <option value="$PROJECT_DIR$/dummyapi/recent_posts.json" />
-        <option value="$PROJECT_DIR$/dummyapi/entries.json" />
+        <option value="$PROJECT_DIR$/dummyapi/links.json" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascripts/main.js" />
-        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="16" />
-    <option name="y" value="40" />
+    <option name="x" value="62" />
+    <option name="y" value="55" />
     <option name="width" value="1224" />
     <option name="height" value="669" />
   </component>
@@ -197,20 +170,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="categolj2-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="categolj2-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="categolj2-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,13 +344,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="40" width="1224" height="669" extended-state="0" />
-    <editor active="true" />
+    <frame x="62" y="55" width="1224" height="669" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18214937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32969034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -406,7 +365,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16213922" sideWeight="0.67030966" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16213922" sideWeight="0.67030966" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -482,114 +441,100 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/uikit.min.css">
+    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="61263" selection-start="61343" selection-end="61343" vertical-scroll-proportion="0.056603774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/uikit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="641" column="30" selection-start="11822" selection-end="11822" vertical-scroll-proportion="0.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/uikit.gradient.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="8" selection-start="19457" selection-end="19457" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/recent_posts.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="132" selection-end="132" vertical-scroll-proportion="0.2112676">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123458.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="121" selection-start="245" selection-end="245" vertical-scroll-proportion="0.4225352">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123457.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="162" selection-end="162" vertical-scroll-proportion="0.30181086">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/links.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="73" selection-start="280" selection-end="280" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/categories.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="395" selection-end="395" vertical-scroll-proportion="0.7556675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/entries.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123456.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="137" selection-end="137" vertical-scroll-proportion="0.26448363">
+        <state line="191" column="39" selection-start="5863" selection-end="5863" vertical-scroll-proportion="0.2882353">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="943" column="34" selection-start="34771" selection-end="34775" vertical-scroll-proportion="-6.1538463">
+        <state line="930" column="35" selection-start="34258" selection-end="34258" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="116" selection-start="1269" selection-end="1269" vertical-scroll-proportion="-23.75">
+        <state line="0" column="11182" selection-start="11182" selection-end="11182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123456.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="15" selection-start="265" selection-end="265" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123457.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="15" selection-start="251" selection-end="251" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/entries/123458.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="15" selection-start="255" selection-end="255" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/handlebars-1.0.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="775" column="22" selection-start="30871" selection-end="30871" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="104" selection-start="2021" selection-end="2021" vertical-scroll-proportion="0.0">
+        <state line="5" column="33" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
+    <entry file="file://$PROJECT_DIR$/params.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="26" selection-start="8547" selection-end="8547" vertical-scroll-proportion="0.45454547">
+        <state line="0" column="423" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="36" selection-start="3210" selection-end="3210" vertical-scroll-proportion="1.0949367">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/categories.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="25" selection-start="1034" selection-end="1034" vertical-scroll-proportion="2.3259494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/entries.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="25" selection-start="1632" selection-end="1632" vertical-scroll-proportion="-3.1666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/links.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dummyapi/recent_posts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

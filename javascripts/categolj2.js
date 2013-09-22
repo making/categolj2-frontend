@@ -86,7 +86,7 @@ categolj2.AppView = Backbone.View.extend({
         var entry;
         if (this.entries) {
             entry = this.entries.where({
-                entry_id: Number(id)
+                entryId: Number(id)
             }, true);
         }
 
@@ -132,9 +132,9 @@ categolj2.AppView = Backbone.View.extend({
         this.$el.html(entriesView.render().el);
         scroll();
     },
-    showEntriesByUser: function (user_id) {
+    showEntriesByUser: function (userId) {
         var entriesView = new categolj2.EntriesByUserView({
-            user_id: user_id
+            userId: userId
         });
         this.$el.html(entriesView.render().el);
         scroll();
@@ -169,7 +169,7 @@ categolj2.EntriesView = Backbone.View.extend({
         var $button = $(e.target),
             id = $button.data('id'),
             entry = this.collection.where({
-                entry_id: Number(id)
+                entryId: Number(id)
             }, true);
         $button.parent().html(entry.get('contents'));
     }
@@ -190,7 +190,7 @@ categolj2.RecentPostsView = Backbone.View.extend({
     template: Handlebars.compile($('#recent-posts-tmpl').html()),
     render: function () {
         this.$el.html(this.template({
-            recent_posts: this.collection.toJSON()
+            recentPosts: this.collection.toJSON()
         }));
         return this;
     }
@@ -233,10 +233,10 @@ categolj2.EntriesByUserView = Backbone.View.extend({
     template: Handlebars.compile($('#entries-by-user-tmpl').html()),
     render: function () {
         this.$el.append(this.template({
-            username: 'User(' + this.options.user_id + ')'
+            username: 'User(' + this.options.userId + ')'
         }));
         var entries = new categolj2.Entries();
-        entries.url = categolj2.API_ROOT + '/users/' + this.options.user_id + '/entries.json';
+        entries.url = categolj2.API_ROOT + '/users/' + this.options.userId + '/entries.json';
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });

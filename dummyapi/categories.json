@@ -2,52 +2,52 @@
     {
         "category": [
             {
-                "category_id": 1,
-                "category_name": "Aaa"
+                "categoryId": 1,
+                "categoryName": "Aaa"
             }
         ]
     },
     {
         "category": [
             {
-                "category_id": 1,
-                "category_name": "Aaa"
+                "categoryId": 1,
+                "categoryName": "Aaa"
             },
             {
-                "category_id": 2,
-                "category_name": "Bbb"
+                "categoryId": 2,
+                "categoryName": "Bbb"
             }
         ]
     },
     {
         "category": [
             {
-                "category_id": 1,
-                "category_name": "Aaa"
+                "categoryId": 1,
+                "categoryName": "Aaa"
             },
             {
-                "category_id": 2,
-                "category_name": "Bbb"
+                "categoryId": 2,
+                "categoryName": "Bbb"
             },
             {
-                "category_id": 3,
-                "category_name": "Ccc"
+                "categoryId": 3,
+                "categoryName": "Ccc"
             }
         ]
     },
     {
         "category": [
             {
-                "category_id": 1,
-                "category_name": "Aaa"
+                "categoryId": 1,
+                "categoryName": "Aaa"
             },
             {
-                "category_id": 2,
-                "category_name": "Bbb"
+                "categoryId": 2,
+                "categoryName": "Bbb"
             },
             {
-                "category_id": 4,
-                "category_name": "Ddd"
+                "categoryId": 4,
+                "categoryName": "Ddd"
             }
         ]
     }

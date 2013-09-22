@@ -1,14 +1,14 @@
 [
     {
-        "link_name": "Twitter",
+        "linkName": "Twitter",
         "url" : "https://twitter.com/making"
     },
     {
-        "link_name": "Github",
+        "linkName": "Github",
         "url" : "https://github.com/making"
     },
     {
-        "link_name": "SlideShare",
+        "linkName": "SlideShare",
         "url" : "http://www.slideshare.net/makingx"
     }
 ]

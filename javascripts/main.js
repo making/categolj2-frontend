@@ -1,9 +1,9 @@
 Handlebars.registerHelper('categoryLink', function (category) {
     var ret = [], categoriesBuf = [];
     _.each(category, function (c) {
-        categoriesBuf.push(_.escape(c.category_name));
+        categoriesBuf.push(_.escape(c.categoryName));
         ret.push('<a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
-            + _.escape(c.category_name) + '</a>');
+            + _.escape(c.categoryName) + '</a>');
     });
     return new Handlebars.SafeString(ret.join(categolj2.SEPARATOR));
 });
@@ -52,8 +52,8 @@ var Router = Backbone.Router.extend({
     showEntriesByCategory: function (category) {
         this.appView.showEntriesByCategory(category);
     },
-    showEntriesByUser: function (user_id) {
-        this.appView.showEntriesByUser(user_id);
+    showEntriesByUser: function (userId) {
+        this.appView.showEntriesByUser(userId);
     }
 });
 

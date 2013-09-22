@@ -57,16 +57,16 @@
 <script type="text/x-handlebars-template" id="recent-posts-tmpl">
     <h3>Recent Posts</h3>
     <ul class="uk-list uk-list-line">
-        {{#each recent_posts}}
-        <li><a href="#entries/{{entry_id}}" class="entry-title">{{title}}</a></li>
+        {{#each recentPosts}}
+        <li><a href="#entries/{{entryId}}" class="entry-title">{{title}}</a></li>
         {{/each}}
     </ul>
 </script>
 <script type="text/x-handlebars-template" id="entry-tmpl">
     <article class="uk-article uk-panel uk-panel-box">
-        <h3 class="uk-article-title"><a href="#/entries/{{entry_id}}" class="entry-title">{{title}}</a></h3>
+        <h3 class="uk-article-title"><a href="#/entries/{{entryId}}" class="entry-title">{{title}}</a></h3>
 
-        <p class="uk-article-meta">{{updated_at}} by <a href="#/users/{{created_by.user_id}}/entries">{{created_by.username}}</a>
+        <p class="uk-article-meta">{{updatedAt}} by <a href="#/users/{{createdBy.userId}}/entries">{{createdBy.username}}</a>
             &nbsp; category: {{categoryLink category}}</p>
 
         <p class="uk-article-lead">
@@ -76,7 +76,7 @@
             {{#if button}}
 
         <div>
-            <button class="uk-button uk-button-expand" type="button" data-id="{{entry_id}}">Read this article</button>
+            <button class="uk-button uk-button-expand" type="button" data-id="{{entryId}}">Read this article</button>
         </div>
         {{/if}}
         </p>
@@ -94,7 +94,7 @@
     <h3>Links</h3>
     <ul>
         {{#each links}}
-        <li><a href="{{url}}">{{link_name}}</a></li>
+        <li><a href="{{url}}">{{linkName}}</a></li>
         {{/each}}
     </ul>
 </script>
