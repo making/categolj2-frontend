@@ -148,10 +148,20 @@ categolj2.EntriesView = Backbone.View.extend({
         'click button': 'renderContents'
     },
     render: function () {
-        var html = _.map(this.collection.models, _.bind(function (entry) {
-            var attrs = _.extend({button: true}, entry.toJSON());
-            return this.template(attrs);
-        }, this)).join('');
+        var html;
+        if (this.collection.size() == 1) {
+            // if there is only one model in collection, render it soon.
+            var entry = this.collection.at(0);
+            // set 'render' true to show contents
+            html = this.template(_.extend({render: true}, entry.toJSON()));
+        } else {
+            // if there are some models in collection, render later and show button to render.
+            html = _.map(this.collection.models, _.bind(function (entry) {
+                // set 'button' true to show 'Read' button.
+                var attributes = _.extend({button: true}, entry.toJSON());
+                return this.template(attributes);
+            }, this)).join('');
+        }
         this.$el.html(html);
         return this;
     },
@@ -169,8 +179,9 @@ categolj2.EntryView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#entry-tmpl').html()),
     render: function () {
-        var attrs = _.extend({render: true}, this.model.toJSON());
-        this.$el.html(this.template(attrs));
+        // set 'render' true to show contents
+        var attributes = _.extend({render: true}, this.model.toJSON());
+        this.$el.html(this.template(attributes));
         return this;
     }
 });
