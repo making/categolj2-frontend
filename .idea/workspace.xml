@@ -9,7 +9,7 @@
     <file path="/Dummy.txt" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379336573972" ignored="false" />
     <file path="/entries.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166826822" ignored="false" />
     <file path="/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379866542512" ignored="false" />
-    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379866357825" ignored="false" />
+    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379867869938" ignored="false" />
     <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379842755821" ignored="false" />
     <file path="/categories.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166542181" ignored="false" />
     <file path="/123456.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166800941" ignored="false" />
@@ -92,7 +92,7 @@
       <file leaf-file-name="categolj2.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="22" selection-start="10253" selection-end="10253" vertical-scroll-proportion="0.3939394">
+            <state line="384" column="80" selection-start="12464" selection-end="12464" vertical-scroll-proportion="0.7878788">
               <folding />
             </state>
           </provider>
@@ -558,7 +558,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="22" selection-start="10253" selection-end="10253" vertical-scroll-proportion="0.3939394">
+        <state line="384" column="80" selection-start="12464" selection-end="12464" vertical-scroll-proportion="0.7878788">
           <folding />
         </state>
       </provider>

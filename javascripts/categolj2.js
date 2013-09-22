@@ -382,7 +382,7 @@ categolj2.PaginationView = Backbone.View.extend({
         return attributes;
     },
     calcBeginAndEnd: function () {
-        var begin = Math.max(0, this.page - this.maxDisplayCount / 2)
+        var begin = Math.max(0, this.page - Math.floor(this.maxDisplayCount / 2))
             , end = begin + this.maxDisplayCount - 1;
         if (end > this.last) {
             end = this.last;
