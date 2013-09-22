@@ -20,21 +20,38 @@ categolj2.Category = Backbone.Model.extend({
 categolj2.Link = Backbone.Model.extend({
 });
 
-// Collections
-categolj2.Entries = Backbone.Collection.extend({
-    defaults: {
-        pageAttributes: {
+function appendPageAndSize(target, page, pageSize) {
+    var append = 'page=' + page + '&size=' + pageSize;
+    return _.contains(target, '?') ? target + '&' + append : target + '?' + append;
+}
 
-        }
-    },
-    url: categolj2.API_ROOT + '/entries.json',
-    model: categolj2.Entry,
+// Pageable object
+categolj2.Pageable = {
     parse: function (response) {
-        this.pageAttibutes = _.omit(response, 'content');
-        //console.log(this.pageAttibutes);
+        this.firstPage = response.firstPage;
+        this.lastPage = response.lastPage;
+        this.totalElements = response.totalElements;
+        this.totalPages = response.totalPages;
         return response.content;
     }
-});
+};
+
+// Collections
+categolj2.Entries = Backbone.Collection.extend(
+    _.extend(categolj2.Pageable, { // mixin
+        targetUrl: categolj2.API_ROOT + '/entries.json',
+        model: categolj2.Entry,
+        initialize: function (options) {
+            options = _.extend({}, options);
+            this.page = Number(options.page) || 0;
+            this.pageSize = Number(options.pageSize) || 5;
+        },
+
+        url: function () {
+            return appendPageAndSize(this.targetUrl, this.page, this.pageSize);
+        }
+    }));
+
 categolj2.RecentPosts = Backbone.Collection.extend({
     url: categolj2.API_ROOT + '/recent_posts.json',
     model: categolj2.RecentPost
@@ -80,10 +97,11 @@ categolj2.AppView = Backbone.View.extend({
             linksView.render();
         }, this));
     },
-    showEntries: function (page, size) {
-        page = Number(page) || 1;
-        size = Number(size) || 10;
-        this.entries = new categolj2.Entries();
+    showEntries: function (page, pageSize) {
+        this.entries = new categolj2.Entries({
+            page: page,
+            pageSize: pageSize
+        });
         var entriesView = new categolj2.EntriesView({
             collection: this.entries
         });
@@ -111,14 +129,17 @@ categolj2.AppView = Backbone.View.extend({
             }
         }
         var entryView = new categolj2.EntryView({
-            model: entry
+            model: entry,
+            render: true
         });
         this.$el.html(entryView.render().el);
         scroll();
     },
-    showSearchResult: function (keyword) {
+    showSearchResult: function (keyword, page, pageSize) {
         var searchResultView = new categolj2.SearchResultView({
-            keyword: keyword
+            keyword: keyword,
+            page: page,
+            pageSize: pageSize
         });
         this.$el.html(searchResultView.render().el);
         scroll();
@@ -134,16 +155,20 @@ categolj2.AppView = Backbone.View.extend({
         }, this));
         scroll();
     },
-    showEntriesByCategory: function (category) {
+    showEntriesByCategory: function (category, page, pageSize) {
         var entriesView = new categolj2.EntriesByCategoryView({
-            category: category
+            category: category,
+            page: page,
+            pageSize: pageSize
         });
         this.$el.html(entriesView.render().el);
         scroll();
     },
-    showEntriesByUser: function (userId) {
+    showEntriesByUser: function (userId, page, pageSize) {
         var entriesView = new categolj2.EntriesByUserView({
-            userId: userId
+            userId: userId,
+            page: page,
+            pageSize: pageSize
         });
         this.$el.html(entriesView.render().el);
         scroll();
@@ -151,45 +176,59 @@ categolj2.AppView = Backbone.View.extend({
 });
 
 categolj2.EntriesView = Backbone.View.extend({
+    template: Handlebars.compile($('#entry-tmpl').html()),
+    render: function () {
+        if (this.collection.size() == 1) {
+            // if there is only one model in collection, render it soon.
+            var entry = this.collection.at(0);
+            // set 'render' true to show contents
+            var entryView = new categolj2.EntryView({
+                model: entry,
+                render: true
+            });
+            this.$el.html(entryView.render().el);
+        } else {
+            // if there are some models in collection, render later and show button to render.
+            _.each(this.collection.models, _.bind(function (entry) {
+                // set 'render' false to show 'Read' button.
+                var entryView = new categolj2.EntryView({
+                    model: entry,
+                    render: false
+                });
+                this.$el.append(entryView.render().el);
+            }, this));
+        }
+        // add pagination after entries
+        var paginationView = new categolj2.PaginationView({
+            collection: this.collection
+        });
+        this.$el.append(paginationView.render().el);
+        return this;
+    }
+});
+
+
+categolj2.EntryView = Backbone.View.extend({
     tagName: 'div',
     template: Handlebars.compile($('#entry-tmpl').html()),
     events: {
         'click button': 'renderContents'
     },
     render: function () {
-        var html;
-        if (this.collection.size() == 1) {
-            // if there is only one model in collection, render it soon.
-            var entry = this.collection.at(0);
+        var attributes;
+        if (this.options.render) {
             // set 'render' true to show contents
-            html = this.template(_.extend({render: true}, entry.toJSON()));
+            attributes = {render: true};
         } else {
-            // if there are some models in collection, render later and show button to render.
-            html = _.map(this.collection.models, _.bind(function (entry) {
-                // set 'button' true to show 'Read' button.
-                var attributes = _.extend({button: true}, entry.toJSON());
-                return this.template(attributes);
-            }, this)).join('');
+            attributes = {button: true};
         }
-        this.$el.html(html);
+        var attributes = _.extend(attributes, this.model.toJSON());
+        this.$el.html(this.template(attributes));
         return this;
     },
     renderContents: function (e) {
-        var $button = $(e.target),
-            id = $button.data('id'),
-            entry = this.collection.get(Number(id));
-        $button.parent().html(entry.get('contents'));
-    }
-});
-
-categolj2.EntryView = Backbone.View.extend({
-    tagName: 'div',
-    template: Handlebars.compile($('#entry-tmpl').html()),
-    render: function () {
-        // set 'render' true to show contents
-        var attributes = _.extend({render: true}, this.model.toJSON());
-        this.$el.html(this.template(attributes));
-        return this;
+        var $button = $(e.target);
+        $button.parent().html(this.model.get('contents'));
     }
 });
 
@@ -222,8 +261,8 @@ categolj2.EntriesByCategoryView = Backbone.View.extend({
         this.$el.append(this.template({
             category: category
         }));
-        var entries = new categolj2.Entries();
-        entries.url = categolj2.API_ROOT + '/categories/' + this.options.category + '/entries.json';
+        var entries = new categolj2.Entries(this.options);
+        entries.targetUrl = categolj2.API_ROOT + '/categories/' + this.options.category + '/entries.json';
 
         var entriesView = new categolj2.EntriesView({
             collection: entries
@@ -242,8 +281,8 @@ categolj2.EntriesByUserView = Backbone.View.extend({
         this.$el.append(this.template({
             username: 'User(' + this.options.userId + ')'
         }));
-        var entries = new categolj2.Entries();
-        entries.url = categolj2.API_ROOT + '/users/' + this.options.userId + '/entries.json';
+        var entries = new categolj2.Entries(this.options);
+        entries.targetUrl = categolj2.API_ROOT + '/users/' + this.options.userId + '/entries.json';
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });
@@ -273,16 +312,93 @@ categolj2.SearchResultView = Backbone.View.extend({
         this.$el.append(this.template({
             keyword: this.options.keyword
         }));
-        var entries = new categolj2.Entries();
-        entries.url = categolj2.API_ROOT + '/entries.json?q=' + encodeURIComponent(this.options.keyword);
+        var entries = new categolj2.Entries(this.options);
+        entries.targetUrl = categolj2.API_ROOT + '/entries.json?q=' + encodeURIComponent(this.options.keyword);
         var entriesView = new categolj2.EntriesView({
             collection: entries
         });
         entries.fetch().success(_.bind(function () {
-            this.$el.focus();
             this.$el.append(entriesView.render().el);
         }, this));
         return this;
+    }
+});
+
+categolj2.PaginationView = Backbone.View.extend({
+    maxDisplayCount: 10,
+    template: Handlebars.compile($('#pagination-tmpl').html()),
+    events: {
+        'click a.go-first': 'goFirst',
+        'click a.go-last': 'goLast',
+        'click a.go-to': 'goTo'
+    },
+    initialize: function () {
+        this.page = this.collection.page;
+        this.pageSize = this.collection.pageSize;
+        this.last = this.collection.totalPages - 1;
+    },
+    render: function () {
+        var attributes = this.buildAttributes();
+        this.$el.html(this.template(attributes));
+        return this;
+    },
+    goFirst: function (e) {
+        e.preventDefault();
+        var page = 0,
+            to = this.changeParameter(_.contains(location.hash, '#') ? location.hash.substring(1) : '', page, this.pageSize);
+        Backbone.history.navigate(to, true);
+    },
+    goLast: function (e) {
+        e.preventDefault();
+        var page = this.last,
+            to = this.changeParameter(_.contains(location.hash, '#') ? location.hash.substring(1) : '', page, this.pageSize);
+        Backbone.history.navigate(to, true);
+    },
+    goTo: function (e) {
+        e.preventDefault();
+        var $a = $(e.target),
+            page = $a.data('page'),
+            to = this.changeParameter(_.contains(location.hash, '#') ? location.hash.substring(1) : '', page, this.pageSize);
+        Backbone.history.navigate(to, true);
+    },
+    buildAttributes: function () {
+        var collection = this.collection,
+            attributes = {
+                firstPageEnabled: !collection.firstPage,
+                firstPageDisabled: collection.firstPage,
+                lastPageEnabled: !collection.lastPage,
+                lastPageDisabled: collection.lastPage
+            },
+            beginAndEnd = this.calcBeginAndEnd();
+        attributes.links = [];
+        for (var page = beginAndEnd.begin; page <= beginAndEnd.end; page++) {
+            attributes.links.push({
+                page: page,
+                displayPage: page + 1,
+                active: page == this.page,
+                inactive: page != this.page
+            });
+        }
+        return attributes;
+    },
+    calcBeginAndEnd: function () {
+        var begin = Math.max(0, this.page - this.maxDisplayCount / 2)
+            , end = begin + this.maxDisplayCount - 1;
+        if (end > this.last) {
+            end = this.last;
+            begin = Math.max(0, end - (this.maxDisplayCount - 1));
+        }
+        return {
+            begin: begin,
+            end: end
+        };
+    },
+    changeParameter: function (target, page, pageSize) {
+        if (!target.match('page') || !target.match('size')) {
+            return appendPageAndSize(target, page, pageSize);
+        }
+        return target.replace(/page=([0-9]+)/, 'page=' + page)
+            .replace(/size=([0-9])+/, 'size=' + pageSize);
     }
 });
 
@@ -309,4 +425,4 @@ categolj2.LoadingView = Backbone.View.extend({
     stop: function () {
         this.spinner.stop();
     }
-})
+});

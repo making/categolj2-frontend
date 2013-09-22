@@ -76,11 +76,13 @@
             {{#if button}}
 
         <div>
-            <button class="uk-button uk-button-expand" type="button" data-id="{{entryId}}">Read this article</button>
+            <button class="uk-button uk-button-expand" class="read-contents" data-id="{{entryId}}">Read this article
+            </button>
         </div>
         {{/if}}
         </p>
     </article>
+    <hr class="uk-article-divider">
 </script>
 <script type="text/x-handlebars-template" id="categories-tmpl">
     <h2>All Categories</h2>
@@ -106,6 +108,33 @@
 </script>
 <script type="text/x-handlebars-template" id="entries-by-user-tmpl">
     <h2>Posts by {{username}} ...</h2>
+</script>
+<script type="text/x-handlebars-template" id="pagination-tmpl">
+    <ul class="uk-pagination">
+        <!-- firstPage -->
+        {{#if firstPageDisabled}}
+        <li class="uk-disabled"><span><i class="uk-icon-double-angle-left"></i></span></li>
+        {{/if}}
+        {{#if firstPageEnabled}}
+        <li><a class="go-first"><i class="uk-icon-double-angle-left"></i></a></li>
+        {{/if}}
+        <!-- links -->
+        {{#each links}}
+        {{#if active}}
+        <li class="uk-active"><span>{{displayPage}}</span></li>
+        {{/if}}
+        {{#if inactive}}
+        <li><a class="go-to" data-page="{{page}}">{{displayPage}}</a></li>
+        {{/if}}
+        {{/each}}
+        <!-- lastPage -->
+        {{#if lastPageDisabled}}
+        <li class="uk-disabled"><span><i class="uk-icon-double-angle-right"></i></span></li>
+        {{/if}}
+        {{#if lastPageEnabled}}
+        <li><a class="go-last"><i class="uk-icon-double-angle-right"></i></a></li>
+        {{/if}}
+    </ul>
 </script>
 
 <script src="javascripts/jquery-1.10.2.min.js"></script>
