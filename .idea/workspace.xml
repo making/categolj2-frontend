@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/categolj2.js" afterPath="$PROJECT_DIR$/javascripts/categolj2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/params.json" afterPath="$PROJECT_DIR$/params.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,19 +80,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="73" selection-start="4640" selection-end="4640" vertical-scroll-proportion="0.48692152">
+            <state line="137" column="81" selection-start="4685" selection-end="4685" vertical-scroll-proportion="-11.958333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="categolj2.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="categolj2.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="59" selection-start="830" selection-end="830" vertical-scroll-proportion="-8.076923">
+            <state line="45" column="78" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.45454547">
               <folding />
             </state>
           </provider>
@@ -138,9 +134,9 @@
         <option value="$PROJECT_DIR$/dummyapi/entries/123457.json" />
         <option value="$PROJECT_DIR$/dummyapi/entries/123458.json" />
         <option value="$PROJECT_DIR$/dummyapi/links.json" />
-        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
         <option value="$PROJECT_DIR$/javascripts/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/javascripts/categolj2.js" />
       </list>
     </option>
   </component>
@@ -546,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="59" selection-start="830" selection-end="830" vertical-scroll-proportion="-8.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="96" selection-start="2332" selection-end="2332" vertical-scroll-proportion="-8.5">
@@ -562,7 +551,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="73" selection-start="4640" selection-end="4640" vertical-scroll-proportion="0.48692152">
+        <state line="137" column="81" selection-start="4685" selection-end="4685" vertical-scroll-proportion="-11.958333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="78" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.45454547">
           <folding />
         </state>
       </provider>

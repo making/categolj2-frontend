@@ -44,7 +44,7 @@ categolj2.Entries = Backbone.Collection.extend(
         initialize: function (options) {
             options = _.extend({}, options);
             this.page = Number(options.page) || 0;
-            this.pageSize = Number(options.pageSize) || 5;
+            this.pageSize = Number(options.pageSize) || 3;
         },
 
         url: function () {
