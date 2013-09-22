@@ -22,8 +22,18 @@ categolj2.Link = Backbone.Model.extend({
 
 // Collections
 categolj2.Entries = Backbone.Collection.extend({
+    defaults: {
+        pageAttributes: {
+
+        }
+    },
     url: categolj2.API_ROOT + '/entries.json',
-    model: categolj2.Entry
+    model: categolj2.Entry,
+    parse: function (response) {
+        this.pageAttibutes = _.omit(response, 'content');
+        //console.log(this.pageAttibutes);
+        return response.content;
+    }
 });
 categolj2.RecentPosts = Backbone.Collection.extend({
     url: categolj2.API_ROOT + '/recent_posts.json',

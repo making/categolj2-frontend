@@ -25,7 +25,7 @@ Handlebars.registerHelper('toString', function (obj) {
 var Router = Backbone.Router.extend({
     routes: {
         '': 'showEntries',
-        'entries?page.page=:page&page.size=:size': 'showEntries',
+        'entries?page=:page&size=:size': 'showEntries',
         'entries/:id': 'showEntry',
         'entries?q=:keyword': 'showSearchResult',
         'categories': 'showCategories',

@@ -3,14 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/categolj2.js" afterPath="$PROJECT_DIR$/javascripts/categolj2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/main.js" />
     </list>
     <ignored path="categolj2-frontend.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379336573972" ignored="false" />
     <file path="/entries.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166826822" ignored="false" />
     <file path="/index.html" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379691758170" ignored="false" />
-    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379823216004" ignored="false" />
-    <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379691951678" ignored="false" />
+    <file path="/categolj2.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379833730717" ignored="false" />
+    <file path="/main.js" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379833208622" ignored="false" />
     <file path="/categories.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166542181" ignored="false" />
     <file path="/123456.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166800941" ignored="false" />
     <file path="/123457.json" changelist="2b74e959-c1c4-47d4-b69c-d56b77c8b96f" time="1379166806102" ignored="false" />
@@ -83,7 +84,7 @@
       <file leaf-file-name="backbone-1.0.0.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="274" column="4" selection-start="10169" selection-end="10186" vertical-scroll-proportion="-8.038462">
+            <state line="849" column="20" selection-start="31119" selection-end="31119" vertical-scroll-proportion="-6.923077">
               <folding />
             </state>
           </provider>
@@ -92,7 +93,16 @@
       <file leaf-file-name="categolj2.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="36" selection-start="5453" selection-end="5454" vertical-scroll-proportion="0.3312102">
+            <state line="4" column="2" selection-start="135" selection-end="135" vertical-scroll-proportion="0.11516315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="29" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,8 +142,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="194" />
-    <option name="y" value="184" />
+    <option name="x" value="230" />
+    <option name="y" value="102" />
     <option name="width" value="1224" />
     <option name="height" value="669" />
   </component>
@@ -151,7 +161,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -163,38 +173,43 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="categolj2-frontend">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="categolj2-frontend">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="javascripts">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="categolj2-frontend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="categolj2-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="categolj2-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="categolj2-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="categolj2-frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -354,13 +369,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="194" y="184" width="1224" height="669" extended-state="0" />
+    <frame x="230" y="102" width="1224" height="669" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18214937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32969034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -371,7 +386,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20797962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20713073" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -486,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/params.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="423" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
@@ -537,14 +545,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/backbone-1.0.0.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="4" selection-start="10169" selection-end="10186" vertical-scroll-proportion="-8.038462">
+        <state line="849" column="20" selection-start="31119" selection-end="31119" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="29" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/categolj2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="36" selection-start="5453" selection-end="5454" vertical-scroll-proportion="0.3312102">
+        <state line="4" column="2" selection-start="135" selection-end="135" vertical-scroll-proportion="0.11516315">
           <folding />
         </state>
       </provider>
