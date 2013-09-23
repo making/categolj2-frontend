@@ -2,20 +2,7 @@
   "entryId":123457,
   "title":"Bar Bar!",
   "contents":"Bar!Bar!Bar!",
-  "category":[
-    {
-      "categoryId":1,
-      "categoryName":"Aaa"
-    },
-    {
-      "categoryId":2,
-      "categoryName":"Bbb"
-    },
-    {
-      "categoryId":4,
-      "categoryName":"Ddd"
-    }
-  ],
+  "category":["Aaa", "Bbb", "Ddd"],
   "createdAt":"2013-04-09 00:00:00",
   "updatedAt":"2013-04-09 00:00:00",
   "createdBy":{

@@ -1,55 +1,15 @@
 [
     {
-        "category": [
-            {
-                "categoryId": 1,
-                "categoryName": "Aaa"
-            }
-        ]
+        "category": ["Aaa"]
     },
     {
-        "category": [
-            {
-                "categoryId": 1,
-                "categoryName": "Aaa"
-            },
-            {
-                "categoryId": 2,
-                "categoryName": "Bbb"
-            }
-        ]
+        "category": ["Aaa", "Bbb"]
     },
     {
-        "category": [
-            {
-                "categoryId": 1,
-                "categoryName": "Aaa"
-            },
-            {
-                "categoryId": 2,
-                "categoryName": "Bbb"
-            },
-            {
-                "categoryId": 3,
-                "categoryName": "Ccc"
-            }
-        ]
+        "category": ["Aaa", "Bbb", "Ccc"]
     },
     {
-        "category": [
-            {
-                "categoryId": 1,
-                "categoryName": "Aaa"
-            },
-            {
-                "categoryId": 2,
-                "categoryName": "Bbb"
-            },
-            {
-                "categoryId": 4,
-                "categoryName": "Ddd"
-            }
-        ]
+        "category": ["Aaa", "Bbb", "Ddd"]
     }
 
 ]

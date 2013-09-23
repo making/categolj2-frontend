@@ -3,20 +3,7 @@
         "entryId": 123458,
         "title": "Bar Bar!",
         "contents": "Bar!Bar!Bar!",
-        "category": [
-            {
-                "categoryId": 1,
-                "categoryName": "Aaa"
-            },
-            {
-                "categoryId": 2,
-                "categoryName": "Bbb"
-            },
-            {
-                "categoryId": 4,
-                "categoryName": "Ddd"
-            }
-        ],
+        "category": ["Aaa", "Bbb", "Ddd"],
         "createdAt": "2013-04-09 00:00:00",
         "updatedAt": "2013-04-09 00:00:00",
         "createdBy": {
@@ -28,20 +15,7 @@
         "entryId": 123457,
         "title": "Foo Foo!",
         "contents": "foo!foo!",
-        "category": [
-            {
-                "categoryId": 1,
-                "categoryName": "Aaa"
-            },
-            {
-                "categoryId": 2,
-                "categoryName": "Bbb"
-            },
-            {
-                "categoryId": 3,
-                "categoryName": "Ccc"
-            }
-        ],
+        "category": ["Aaa", "Bbb", "Ccc"],
         "createdAt": "2013-04-09 00:00:00",
         "updatedAt": "2013-04-09 00:00:00",
         "createdBy": {
@@ -53,20 +27,7 @@
         "entryId": 123456,
         "title": "Hello world!",
         "contents": "Hello!Hello!Hello!",
-        "category": [
-            {
-                "categoryId": 1,
-                "categoryName": "Aaa"
-            },
-            {
-                "categoryId": 2,
-                "categoryName": "Bbb"
-            },
-            {
-                "categoryId": 3,
-                "categoryName": "Ccc"
-            }
-        ],
+        "category": ["Aaa", "Bbb", "Ccc"],
         "createdAt": "2013-04-09 00:00:00",
         "updatedAt": "2013-04-09 00:00:00",
         "createdBy": {

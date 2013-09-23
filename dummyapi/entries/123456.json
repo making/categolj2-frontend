@@ -2,20 +2,7 @@
   "entryId":123456,
   "title":"Hello world!",
   "contents":"Hello!Hello!Hello!",
-  "category":[
-    {
-      "categoryId":1,
-      "categoryName":"Aaa"
-    },
-    {
-      "categoryId":2,
-      "categoryName":"Bbb"
-    },
-    {
-      "categoryId":3,
-      "categoryName":"Ccc"
-    }
-  ],
+  "category":["Aaa", "Bbb", "Ccc"],
   "createdAt":"2013-04-09 00:00:00",
   "updatedAt":"2013-04-09 00:00:00",
   "createdBy":{
