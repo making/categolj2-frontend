@@ -1,8 +1,0 @@
-{
-    "name" : "categloj2-frontend",
-    "version" : "1.0.0-SNAPSHOT",
-    "devDependencies" : {
-	"grunt" : "~0.4",
-	"grunt-contrib-jst" : "~0.4"
-    }
-}
