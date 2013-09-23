@@ -1,9 +1,9 @@
 Handlebars.registerHelper('categoryLink', function (category) {
     var ret = [], categoriesBuf = [];
     _.each(category, function (c) {
-        categoriesBuf.push(_.escape(c.categoryName));
+        categoriesBuf.push(_.escape(c));
         ret.push('<a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
-            + _.escape(c.categoryName) + '</a>');
+            + _.escape(c) + '</a>');
     });
     return new Handlebars.SafeString(ret.join(categolj2.SEPARATOR));
 });

@@ -1,38 +1,47 @@
-[
-    {
-        "entryId": 123458,
-        "title": "Bar Bar!",
-        "contents": "Bar!Bar!Bar!",
-        "category": ["Aaa", "Bbb", "Ddd"],
-        "createdAt": "2013-04-09 00:00:00",
-        "updatedAt": "2013-04-09 00:00:00",
-        "createdBy": {
-            "userId": 1,
-            "username": "making"
+{
+    "content": [
+        {
+            "entryId": 123458,
+            "title": "Bar Bar!",
+            "contents": "Bar!Bar!Bar!",
+            "category": ["Aaa", "Bbb", "Ddd"],
+            "createdAt": "2013-04-09 00:00:00",
+            "updatedAt": "2013-04-09 00:00:00",
+            "createdBy": {
+                "userId": 1,
+                "username": "making"
+            }
+        },
+        {
+            "entryId": 123457,
+            "title": "Foo Foo!",
+            "contents": "foo!foo!",
+            "category": ["Aaa", "Bbb", "Ccc"],
+            "createdAt": "2013-04-09 00:00:00",
+            "updatedAt": "2013-04-09 00:00:00",
+            "createdBy": {
+                "userId": 1,
+                "username": "making"
+            }
+        },
+        {
+            "entryId": 123456,
+            "title": "Hello world!",
+            "contents": "Hello!Hello!Hello!",
+            "category": ["Aaa", "Bbb", "Ccc"],
+            "createdAt": "2013-04-09 00:00:00",
+            "updatedAt": "2013-04-09 00:00:00",
+            "createdBy": {
+                "userId": 1,
+                "username": "making"
+            }
         }
-    },
-    {
-        "entryId": 123457,
-        "title": "Foo Foo!",
-        "contents": "foo!foo!",
-        "category": ["Aaa", "Bbb", "Ccc"],
-        "createdAt": "2013-04-09 00:00:00",
-        "updatedAt": "2013-04-09 00:00:00",
-        "createdBy": {
-            "userId": 1,
-            "username": "making"
-        }
-    },
-    {
-        "entryId": 123456,
-        "title": "Hello world!",
-        "contents": "Hello!Hello!Hello!",
-        "category": ["Aaa", "Bbb", "Ccc"],
-        "createdAt": "2013-04-09 00:00:00",
-        "updatedAt": "2013-04-09 00:00:00",
-        "createdBy": {
-            "userId": 1,
-            "username": "making"
-        }
-    }
-]
+    ],
+    "firstPage": true,
+    "lastPage": false,
+    "number": 0,
+    "numberOfElements": 3,
+    "size": 3,
+    "totalElements": 3,
+    "totalPages": 1
+}
