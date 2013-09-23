@@ -2,7 +2,7 @@ Handlebars.registerHelper('categoryLink', function (category) {
     var ret = [], categoriesBuf = [];
     _.each(category, function (c) {
         categoriesBuf.push(_.escape(c));
-        ret.push('<a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
+        ret.push('<a href="#/categories/' + categoriesBuf.join(categolj2.SEPARATOR) + '/entries">'
             + _.escape(c) + '</a>');
     });
     return new Handlebars.SafeString(ret.join(categolj2.SEPARATOR));
@@ -11,7 +11,7 @@ Handlebars.registerHelper('breadcrumb', function (category) {
     var ret = [], categoriesBuf = [];
     _.each(category, function (c) {
         categoriesBuf.push(_.escape(c));
-        ret.push('<li><a href="#/categories/' + encodeURIComponent(categoriesBuf.join(categolj2.SEPARATOR)) + '/entries">'
+        ret.push('<li><a href="#/categories/' + categoriesBuf.join(categolj2.SEPARATOR) + '/entries">'
             + _.escape(c) + '</a></li>');
     });
     return new Handlebars.SafeString(ret.join(''));
