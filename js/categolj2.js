@@ -132,7 +132,8 @@ categolj2.AppView = Backbone.View.extend({
         }
         var entryView = new categolj2.EntryView({
             model: entry,
-            render: true
+            render: true,
+            social: true
         });
         this.$el.html(entryView.render().el);
         scroll();
@@ -219,7 +220,8 @@ categolj2.EntryView = Backbone.View.extend({
     render: function () {
         var attributes = {
             frontendRoot: categolj2.FRONTEND_ROOT,
-            blogTitle: categolj2.BLOG_TITLE
+            blogTitle: categolj2.BLOG_TITLE,
+            social: this.options.social
         };
         if (this.options.render) {
             // set 'render' true to show contents
@@ -229,16 +231,6 @@ categolj2.EntryView = Backbone.View.extend({
         }
         var attributes = _.extend(attributes, this.model.toJSON());
         this.$el.html(this.template(attributes));
-        // show tweet button
-        !function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, "script", "twitter-wjs");
         return this;
     },
     renderContents: function (e) {

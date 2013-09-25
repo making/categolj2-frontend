@@ -84,6 +84,7 @@
         </div>
         {{/if}}
         </p>
+        {{#if social}}
         <hr class="uk-article-divider">
         <a href="http://b.hatena.ne.jp/entry/{{frontendRoot}}%23/entries/{{entryId}}" class="hatena-bookmark-button" data-hatena-bookmark-title="{{title}} - {{blogTitle}}"
            data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img
@@ -92,6 +93,7 @@
         <a href="http://twitter.com/share" class="twitter-share-button"
            data-count="horizontal" data-text="{{title}} - {{blogTitle}}"
            data-via="making" data-url="{{frontendRoot}}%23/entries/{{entryId}}">Tweet</a>
+        {{/if}}
         </article>
     <hr class="uk-article-divider">
 </script>
@@ -159,5 +161,7 @@
 <!-- buttons -->
 <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
         async="async"></script>
+<script type="text/javascript"
+        src="http://platform.twitter.com/widgets.js"></script>
 </body>
 </html>
