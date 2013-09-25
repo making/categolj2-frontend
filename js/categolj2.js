@@ -229,6 +229,16 @@ categolj2.EntryView = Backbone.View.extend({
         }
         var attributes = _.extend(attributes, this.model.toJSON());
         this.$el.html(this.template(attributes));
+        // show tweet button
+        !function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, "script", "twitter-wjs");
         return this;
     },
     renderContents: function (e) {
