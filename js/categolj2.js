@@ -6,6 +6,7 @@ var categolj2 = {};
 categolj2.API_ROOT = 'http://blog.ik.am/api';
 categolj2.FRONTEND_ROOT = 'http://blog.ik.am/';
 categolj2.SEPARATOR = '::';
+categolj2.BLOG_TITLE = 'BLOG.IK.AM';
 
 // Models
 categolj2.Entry = Backbone.Model.extend({
@@ -217,7 +218,8 @@ categolj2.EntryView = Backbone.View.extend({
     },
     render: function () {
         var attributes = {
-            frontendRoot: categolj2.FRONTEND_ROOT
+            frontendRoot: categolj2.FRONTEND_ROOT,
+            blogTitle: categolj2.BLOG_TITLE
         };
         if (this.options.render) {
             // set 'render' true to show contents
