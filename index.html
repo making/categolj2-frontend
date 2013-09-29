@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="uikit/css/uikit.css">
     <link rel="stylesheet" href="uikit/css/uikit.gradient.css">
+    <link id="rss" rel="alternate" type="application/rss+xml" title="BLOG.IK.AM" href="/feed">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="google-site-verification" content="EmvO8Tdbk_6pTA0dW3Yb9vj9lHOA6oDRZYCt6jAUwAQ"/>
@@ -23,7 +25,7 @@
     <header>
         <h1><a href=".">BLOG.IK.AM</a></h1>
 
-        <p>@making's Tech memo</p>
+        <p><a href="https://twitter.com/making">@making</a>'s memo</p>
 
         <div id="loading"></div>
         <p class="view">
@@ -68,7 +70,7 @@
     <article class="uk-article uk-panel uk-panel-box">
         <h3 class="uk-article-title"><a href="#/entries/{{entryId}}" class="entry-title">{{title}}</a></h3>
 
-        <p class="uk-article-meta">{{updatedAt}} by <a href="#/users/{{createdBy.userId}}/entries">{{createdBy.username}}</a>
+        <p class="uk-article-meta">updated at {{updatedAt}} by <a href="#/users/{{updatedBy.userId}}/entries">{{updatedBy.username}}</a>
             &nbsp; category: {{categoryLink category}}</p>
 
         <p class="uk-article-lead">
@@ -83,7 +85,17 @@
         </div>
         {{/if}}
         </p>
-    </article>
+        {{#if social}}
+        <hr class="uk-article-divider">
+        <a href="http://b.hatena.ne.jp/entry/{{frontendRoot}}%23/entries/{{entryId}}" class="hatena-bookmark-button" data-hatena-bookmark-title="{{title}} - {{blogTitle}}"
+           data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img
+                src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加"
+                width="20" height="20" style="border: none;"/></a>
+        <a href="http://twitter.com/share" class="twitter-share-button"
+           data-count="horizontal" data-text="{{title}} - {{blogTitle}}"
+           data-via="making" data-url="{{frontendRoot}}#/entries/{{entryId}}">Tweet</a>
+        {{/if}}
+        </article>
     <hr class="uk-article-divider">
 </script>
 <script type="text/x-handlebars-template" id="categories-tmpl">
@@ -147,5 +159,10 @@
 <script src="js/categolj2.js"></script>
 <script src="js/app.js"></script>
 <script src="uikit/js/uikit.js"></script>
+<!-- buttons -->
+<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
+        async="async"></script>
+<script type="text/javascript"
+        src="http://platform.twitter.com/widgets.js"></script>
 </body>
 </html>

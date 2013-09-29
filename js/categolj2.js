@@ -4,7 +4,9 @@ var categolj2 = {};
 //categolj2.API_ROOT = './dummyapi';
 //categolj2.API_ROOT = 'http://localhost:8080/categolj/api';
 categolj2.API_ROOT = 'http://blog.ik.am/api';
+categolj2.FRONTEND_ROOT = 'http://blog.ik.am/';
 categolj2.SEPARATOR = '::';
+categolj2.BLOG_TITLE = 'BLOG.IK.AM';
 
 // Models
 categolj2.Entry = Backbone.Model.extend({
@@ -130,7 +132,8 @@ categolj2.AppView = Backbone.View.extend({
         }
         var entryView = new categolj2.EntryView({
             model: entry,
-            render: true
+            render: true,
+            social: true
         });
         this.$el.html(entryView.render().el);
         scroll();
@@ -215,12 +218,16 @@ categolj2.EntryView = Backbone.View.extend({
         'click button': 'renderContents'
     },
     render: function () {
-        var attributes;
+        var attributes = {
+            frontendRoot: categolj2.FRONTEND_ROOT,
+            blogTitle: categolj2.BLOG_TITLE,
+            social: this.options.social
+        };
         if (this.options.render) {
             // set 'render' true to show contents
-            attributes = {render: true};
+            attributes.render = true;
         } else {
-            attributes = {button: true};
+            attributes.button = true;
         }
         var attributes = _.extend(attributes, this.model.toJSON());
         this.$el.html(this.template(attributes));
