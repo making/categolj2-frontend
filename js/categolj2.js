@@ -1,9 +1,9 @@
 var categolj2 = {};
 
 //categolj2.API_ROOT = 'http://categolj2.ik.am/dummyapi';
-categolj2.API_ROOT = './dummyapi';
+//categolj2.API_ROOT = './dummyapi';
 //categolj2.API_ROOT = 'http://localhost:8080/categolj/api';
-//categolj2.API_ROOT = 'http://blog.ik.am/api';
+categolj2.API_ROOT = 'http://blog.ik.am/api';
 categolj2.FRONTEND_ROOT = 'http://blog.ik.am/';
 categolj2.SEPARATOR = '::';
 categolj2.BLOG_TITLE = 'BLOG.IK.AM';
